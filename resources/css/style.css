@@ -1,0 +1,279 @@
+/**********************
+-----Main Colors:-----
+-BLACK: #383737
+-DARK-GRAY: #222728
+-ORANGE: #FF6901
+----------------------
+--------Index:--------
+1- NAVBAR
+2- SHOWCASE
+3- CATEGORIES
+----------------------
+**********************/
+*{
+  padding: 0px;
+  margin: 0px;
+  color: #383737;
+  list-style: none;
+  font-family: monospace, sans-serif;
+  box-sizing: border-box;
+}
+/***********************************
+              NAVBAR
+***********************************/
+#navbar-list{
+  position: fixed;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  margin-top: -50px;
+  background: white;
+  border-bottom: 1px rgba(150, 150, 150, 0.2) solid;
+  box-shadow: 0px 0px 8px -3px lightgray;
+  z-index: 5;
+}
+.navbar-list-item{
+  padding: 15px 10px;
+  margin: 0px 25px -1px;
+  font-size: 11pt;
+  cursor: pointer;
+}
+.navbar-list-item>a{
+  text-decoration: none;
+}
+.navbar-list-item:hover{
+  color: #FF6901;
+}
+.navbar-list-logo-item{
+  order: -1;
+  margin: 0px auto -5px 20px;
+}
+.navbar-list-logo-item>img{
+  height: 30px;
+  margin: -5px;
+}
+.navbar-item-active{
+  border-bottom: 2px #FF6901 solid;
+}
+.navbar-item-active>a{
+  color: #FF6901;
+}
+
+/***********************************
+              SECTIONS
+***********************************/
+.section-title{
+  position: relative;
+  padding: 5px 10px 5px 0px;
+  margin: 10px 10px 10px 60px;
+  font-size: 14pt;
+  font-weight: 600;
+}
+.section-title::after{
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  content: '';
+  width: 40px;
+  border-bottom: 2px gray solid;
+}
+
+/***********************************
+              SHOWCASE
+***********************************/
+#showcase{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 95vh;
+  padding: 50px 2%;
+  margin-top: 50px;
+  background: rgba(180, 180, 180, 0.1);
+}
+.showcase-description{
+  height: 80%;
+}
+.showcase-description>h1{
+  margin: 30px 0px 30px 0px;
+  color: #FF6901;
+  text-align: center;
+  font-size: 35pt;
+}
+.showcase-description>p{
+  margin: 10px 0px;
+  text-align: center;
+  font-size: 20px;
+}
+.showcase-search{
+  display: flex;
+  width: 80%;
+  margin: 70px auto 0px;
+}
+.showcase-search>input{
+  width: 85%;
+  padding: 10px 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px rgba(180, 180, 180, 1) solid;
+}
+.showcase-search>button{
+  width: 50px;
+  padding: 4px 0px 2px;
+  margin-left: -1px;
+  background: white;
+  border: 1px rgba(180, 180, 180, 1) solid;
+}
+.showcase-search>button+button{
+  width: 45px;
+  padding: 6px 0px 2px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/***********************************
+              CATEGORIES
+***********************************/
+#categories{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  padding: 20px 0px;
+  margin: 0px auto;
+}
+#categories>div{
+  position: relative;
+  height: 300px;
+  padding: 2px;
+  border: 4px white solid;
+  overflow: hidden;
+}
+.c1{
+  width: 40%;
+  background: linear-gradient(140deg,rgba(30, 150, 50, 1),white);
+}
+.c2{
+  width: 60%;
+  background: linear-gradient(to left top,white,#081D4D);
+}
+.c3{
+  width: 60%;
+  background: linear-gradient(to left top,white,#15289F);
+}
+.c4{
+  width: 40%;
+  background: linear-gradient(to left top,white,black);
+}
+.categorie-picture{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-10deg);
+  mix-blend-mode: multiply;
+}
+.categorie-name{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 18pt;
+}
+.c1>.categorie-picture{
+  background-image: url("../images/phones/Oppo-K3.jpg");
+}
+.c2>.categorie-picture{
+  background-image: url("../images/phones/LG-K40.jpg");
+}
+.c3>.categorie-picture{
+  background-image: url("../images/phones/Mi-9T-PRO.jpg");
+}
+.c4>.categorie-picture{
+  background-image: url("../images/phones/huaweip30pro.jpg");
+}
+
+/***********************************
+           LES DERNIERS
+***********************************/
+#les-derniers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 95%;
+  padding: 20px 5px;
+  margin: 0px auto;
+}
+.les-derniers-categorie{
+  position: relative;
+  width: 350px;
+  margin: 20px 0px;
+  border: 1px lightgray solid;
+  border-radius: 3px;
+}
+.les-derniers-categorie-title{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  padding: 0px 15px;
+  background: white;
+  font-size: 12pt;
+  font-weight: 600;
+  transform: translateX(-50%);
+}
+.les-derniers-item{
+  display: flex;
+  align-items: center;
+}
+.les-derniers-item:not(:last-child){
+  border-bottom: 1px lightgray solid;
+}
+.les-derniers-item-number{
+  margin: 3px 5px 3px 12px;
+  color: lightgray;
+  font-size: 12pt;
+  font-weight: 600;
+}
+.les-derniers-item-image{
+  height: 40px;
+  margin: 5px 20px 3px 10px;
+}
+.les-derniers-item-name{
+  font-size: 11pt;
+}
+
+/***********************************
+                 VS
+***********************************/
+#vs-section{
+  display: flex;
+  width: 95%;
+  padding: 20px 20px;
+  margin: 0px auto;
+}
+.phone-vs-phone{
+  position: relative;
+  display: flex;
+  height: 120px;
+  width: 210px;
+  margin: 0px 10px;
+  overflow: hidden;
+}
+.phone-vs-phone-picture{
+  height: 200px;
+  width: 95px;
+  margin: 0px 5px;
+}
+.vs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 5px 5px 2px;
+  background: white;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
