@@ -77,6 +77,9 @@
   width: 40px;
   border-bottom: 2px #ED2010 solid;
 }
+.section-title>span{
+  color: #ED2010;
+}
 
 /***********************************
               SHOWCASE
@@ -262,16 +265,6 @@
   text-align: center;
   mix-blend-mode: exclusion;
 }
-/* .categorie-name::after{
-  position: absolute;
-  bottom: 45%;
-  left: 40%;
-  content: '';
-  height: 30px;
-  width: 80px;
-  border-top: 2px #ED2010 solid;
-  border-bottom: 2px #ED2010 solid;
-} */
 .c1>.categorie-picture{
   background-image: url("../images/phones/Oppo-K3.jpg");
 }
@@ -324,7 +317,7 @@
 }
 .les-derniers-item-number{
   margin: 3px 5px 3px 12px;
-  color: lightgray;
+  color: rgba(237, 32, 16, 0.5);
   font-size: 12pt;
   font-weight: 600;
 }
