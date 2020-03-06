@@ -2,7 +2,7 @@
 -----Main Colors:-----
 -BLACK: #383737
 -DARK-GRAY: #222728
--ORANGE: #E3482D
+-ORANGE: #ED2010
 ----------------------
 --------Index:--------
 1- NAVBAR
@@ -42,7 +42,7 @@
   text-decoration: none;
 }
 .navbar-list-item:hover{
-  color: #E3482D;
+  color: #ED2010;
 }
 .navbar-list-logo-item{
   order: -1;
@@ -53,10 +53,10 @@
   margin: -5px;
 }
 .navbar-item-active{
-  border-bottom: 2px #E3482D solid;
+  border-bottom: 2px #ED2010 solid;
 }
 .navbar-item-active>a{
-  color: #E3482D;
+  color: #ED2010;
 }
 
 /***********************************
@@ -66,7 +66,6 @@
   position: relative;
   padding: 5px 10px 5px 0px;
   margin: 10px 10px 10px 60px;
-  color: #E3482D;
   font-size: 14pt;
   font-weight: 600;
 }
@@ -76,7 +75,7 @@
   left: 0px;
   content: '';
   width: 40px;
-  border-bottom: 2px #E3482D solid;
+  border-bottom: 2px #ED2010 solid;
 }
 
 /***********************************
@@ -89,6 +88,8 @@
   height: 95vh;
   padding: 50px 2%;
   margin-top: 50px;
+  background: url('../images/BG83.jpg');
+  background-size: 100%;
 }
 .showcase-description{
   display: flex;
@@ -99,12 +100,6 @@
   height: 100px;
   width: 300px;
   margin: 0px auto;
-}
-.showcase-description>h1{
-  margin: 30px 0px 30px 0px;
-  color: #E3482D;
-  text-align: center;
-  font-size: 35pt;
 }
 .showcase-description>p{
   margin: 10px 0px;
@@ -235,16 +230,16 @@
   overflow: hidden;
 }
 .c1{
-  background: linear-gradient(140deg,rgba(30, 150, 50, 1),white);
+  background: linear-gradient(to right bottom, white, rgba(30, 150, 50, 1));
 }
 .c2{
-  background: linear-gradient(to left top,white,#081D4D);
+  background: linear-gradient(to right bottom,white,#081D4D);
 }
 .c3{
-  background: linear-gradient(to left top,white,#15289F);
+  background: linear-gradient(to right bottom,white,#15289F);
 }
 .c4{
-  background: linear-gradient(to left top,white,black);
+  background: linear-gradient(to right bottom,white,black);
 }
 .categorie-picture{
   position: absolute;
@@ -257,15 +252,26 @@
   mix-blend-mode: multiply;
 }
 .categorie-name{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  top: 90%;
+  width: 101%;
+  padding: 5px 20px;
   color: white;
+  background: #ED2010;
   font-size: 18pt;
+  text-align: center;
+  mix-blend-mode: exclusion;
 }
+/* .categorie-name::after{
+  position: absolute;
+  bottom: 45%;
+  left: 40%;
+  content: '';
+  height: 30px;
+  width: 80px;
+  border-top: 2px #ED2010 solid;
+  border-bottom: 2px #ED2010 solid;
+} */
 .c1>.categorie-picture{
   background-image: url("../images/phones/Oppo-K3.jpg");
 }
@@ -303,6 +309,7 @@
   top: -10px;
   left: 50%;
   padding: 0px 15px;
+  color: #ED2010;
   background: white;
   font-size: 12pt;
   font-weight: 600;
