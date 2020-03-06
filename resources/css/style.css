@@ -88,10 +88,17 @@
   height: 95vh;
   padding: 50px 2%;
   margin-top: 50px;
-  background: rgba(180, 180, 180, 0.1);
+  /* background: linear-gradient(140deg, lightgray, white); */
 }
 .showcase-description{
-  height: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+#showcase-logo{
+  height: 100px;
+  width: 300px;
+  margin: 0px auto;
 }
 .showcase-description>h1{
   margin: 30px 0px 30px 0px;
@@ -107,7 +114,7 @@
 .showcase-search{
   display: flex;
   width: 80%;
-  margin: 70px auto 0px;
+  margin: 20px auto 0px;
 }
 .showcase-search>input{
   width: 85%;
@@ -131,36 +138,112 @@
 }
 
 /***********************************
+              GUMS
+***********************************/
+#les-gams{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 95%;
+  padding: 20px 0px;
+  margin: 0px auto;
+}
+#les-gams>div{
+  position: relative;
+  height: 450px;
+  padding: 2px;
+  border: 4px white solid;
+  overflow: hidden;
+}
+.gam-c{
+  overflow: hidden;
+}
+.gam-c1{
+  width: 55%;
+  background: linear-gradient(140deg,rgba(30, 150, 50, 1),white);
+}
+.gam-c2-c3{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+}
+.gam-c2{
+  height: 50%;
+  width: 100%;
+  margin-bottom: 3px;
+  background: linear-gradient(to left top,white,#081D4D);
+}
+.gam-c3{
+  height: 50%;
+  width: 100%;
+  padding-top: 10px;
+  margin-top: 3px;
+  background: linear-gradient(to left top,white,#15289F);
+}
+.gam-picture{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-10deg);
+  mix-blend-mode: multiply;
+}
+.gam-name{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 18pt;
+}
+.gam-c2>.gam-name, .gam-c3>.gam-name{
+  height: 50%;
+}
+.gam-c1>.gam-picture{
+  background-image: url("../images/phones/Oppo-K3.jpg");
+}
+.gam-c2>.gam-picture{
+  height: 48%;
+  background-image: url("../images/phones/LG-K40.jpg");
+}
+.gam-c3>.gam-picture{
+  height: 48%;
+  background-image: url("../images/phones/Mi-9T-PRO.jpg");
+}
+
+/***********************************
               CATEGORIES
 ***********************************/
 #categories{
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
   width: 95%;
   padding: 20px 0px;
   margin: 0px auto;
 }
 #categories>div{
   position: relative;
-  height: 300px;
+  height: 350px;
+  width: 25%;
   padding: 2px;
   border: 4px white solid;
   overflow: hidden;
 }
 .c1{
-  width: 40%;
   background: linear-gradient(140deg,rgba(30, 150, 50, 1),white);
 }
 .c2{
-  width: 60%;
   background: linear-gradient(to left top,white,#081D4D);
 }
 .c3{
-  width: 60%;
   background: linear-gradient(to left top,white,#15289F);
 }
 .c4{
-  width: 40%;
   background: linear-gradient(to left top,white,black);
 }
 .categorie-picture{
@@ -168,7 +251,7 @@
   height: 100%;
   width: 100%;
   background-position: center;
-  background-size: contain;
+  background-size: 90%;
   background-repeat: no-repeat;
   transform: rotate(-10deg);
   mix-blend-mode: multiply;
@@ -276,4 +359,21 @@
   background: white;
   border-radius: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+/***********************************
+               FOOTER
+***********************************/
+footer{
+  margin-top: 20px;
+  background: white;
+  border-top: 1px rgba(150, 150, 150, 0.2) solid;
+  box-shadow: 0px 0px 8px -3px lightgray;
+}
+footer>p{
+  color: orangered;
+  padding: 20px 0px;
+  font-size: 13pt;
+  font-weight: 600;
+  text-align: center;
 }
