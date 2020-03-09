@@ -18,6 +18,9 @@
   font-family: monospace, sans-serif;
   box-sizing: border-box;
 }
+body{
+  background: #F7F7F7;
+}
 /***********************************
               NAVBAR
 ***********************************/
@@ -88,11 +91,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 95vh;
+  height: 55vh;
   padding: 50px 2%;
-  margin-top: 50px;
-  background: url('../images/BG83.jpg');
-  background-size: 100%;
+  margin: 50px 0px 50px 0px;
 }
 .showcase-description{
   display: flex;
@@ -120,6 +121,19 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: 1px rgba(180, 180, 180, 1) solid;
+}
+.showcase-search>input:focus, #search-btn:focus, #filters-btn:focus{
+  outline-color: #ED2010;
+  z-index: 10;
+}
+#search-btn:hover, #filters-btn:hover{
+  fill: #ED2010 !important;
+  transform: scale(1.1);
+  z-index: 15;
+}
+#search-btn:active, #filters-btn:active{
+  transform: scale(1.05);
+  z-index: 15;
 }
 .showcase-search>button{
   width: 50px;
@@ -249,7 +263,7 @@
   height: 100%;
   width: 100%;
   background-position: center;
-  background-size: 90%;
+  background-size: 100%;
   background-repeat: no-repeat;
   transform: rotate(-10deg);
   mix-blend-mode: multiply;
@@ -372,12 +386,34 @@ footer{
   border-top: 1px rgba(150, 150, 150, 0.2) solid;
   box-shadow: 0px 0px 8px -3px lightgray;
 }
-footer>p{
-  color: #ED2010;
-  padding: 20px 0px;
-  font-size: 13pt;
+.footer-divs{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0px 0px 0px;
+}
+.footer-div1{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+.div-title{
+  color: white;
+  font-size: 14pt;
   font-weight: 600;
-  text-align: center;
+}
+footer li{
+  padding: 5px 0px;
+  color: lightgray;
+  font-size: 11pt;
+}
+.footer-div2{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+#footer-logo{
+  height: 100px;
+  width: 270px;
 }
 #footer-bottom{
   position: absolute;
