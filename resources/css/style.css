@@ -108,8 +108,8 @@ body{
   height: 70%;
 }
 #showcase-logo{
-  height: 100px;
-  width: 270px;
+  height: 80px;
+  width: 230px;
   margin: 0px auto;
 }
 .showcase-description>p{
@@ -121,7 +121,7 @@ body{
 .showcase-search{
   display: flex;
   /* width: 80%; */
-  width: 400px;
+  width: 350px;
   margin: 30px auto 0px;
 }
 .showcase-search>input{
