@@ -55,14 +55,17 @@ body{
 }
 .navbar-list-logo-item{
   order: -1;
-  margin: 0px auto -5px 20px;
+  /* margin: 0px auto -5px 20px; */
 }
 .navbar-list-logo-item>img{
   height: 30px;
   margin: -5px;
 }
 .navbar-item-active{
-  border-bottom: 2px #ED2010 solid;
+  margin: 2px 0px 2px;
+  border-radius: 5px;
+  border: 1px white solid;
+  /* border-bottom: 2px #ED2010 solid; */
 }
 .navbar-item-active>a{
   color: #ED2010;
