@@ -15,7 +15,8 @@
   margin: 0px;
   color: #383737;
   list-style: none;
-  font-family: monospace, sans-serif;
+  font-family: sans-serif;
+  font-weight: 600;
   box-sizing: border-box;
 }
 body{
@@ -108,7 +109,7 @@ body{
 }
 #showcase-logo{
   height: 100px;
-  width: 300px;
+  width: 270px;
   margin: 0px auto;
 }
 .showcase-description>p{
@@ -125,6 +126,7 @@ body{
 .showcase-search>input{
   width: 85%;
   padding: 12px 20px;
+  background: #232323;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: 1px rgba(180, 180, 180, 1) solid;
@@ -146,12 +148,13 @@ body{
   width: 50px;
   padding: 4px 0px 2px;
   margin-left: -1px;
-  background: white;
+  background: #232323;
   border: 1px rgba(180, 180, 180, 1) solid;
 }
 .showcase-search>button+button{
   width: 45px;
   padding: 6px 0px 2px;
+  fill: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -426,7 +429,7 @@ footer{
   width: 60%;
 }
 .div-title{
-  color: white;
+  color: #ED2010;
   font-size: 14pt;
   font-weight: 600;
 }
