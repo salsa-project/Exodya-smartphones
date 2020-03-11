@@ -120,8 +120,9 @@ body{
 }
 .showcase-search{
   display: flex;
-  width: 80%;
-  margin: 20px auto 0px;
+  /* width: 80%; */
+  width: 400px;
+  margin: 70px auto 0px;
 }
 .showcase-search>input{
   width: 85%;
