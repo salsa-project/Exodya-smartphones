@@ -195,7 +195,7 @@ body{
 }
 #les-gams>div{
   position: relative;
-  height: 450px;
+  height: 400px;
   overflow: hidden;
 }
 .gam-c{
@@ -374,24 +374,15 @@ body{
   height: 40px;
   margin: 5px 20px 3px 10px;
 }
+.coming-soon .les-derniers-item-image{
+  height: 40px;
+  margin: 5px 20px 3px 10px;
+  filter: grayscale(1);
+}
 .les-derniers-item-name{
   font-size: 11pt;
 }
-.coming-soon{
-  position: relative;
-  background: linear-gradient(120deg, gray, white);
-}
-.les-derniers-layer{
-  position: absolute;
-  background: url('./../images/phones/Oppo-F11-64-GB-removebg-preview.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-  height: 100%;
-  width: 100%;
-  mix-blend-mode: multiply;
-  filter: grayscale(1);
-}
+
 /***********************************
                  VS
 ***********************************/
@@ -442,12 +433,13 @@ footer{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
-  margin: 80px 0px 0px;
+  margin: 30px 0px 0px;
 }
 .footer-div1{
   display: flex;
   justify-content: space-around;
   width: 60%;
+  padding-top: 50px;
 }
 .div-title{
   color: #ED2010;
@@ -467,14 +459,17 @@ footer li{
 #footer-logo{
   height: 100px;
   width: 270px;
-  margin: 0px auto;
+  margin: 0px auto 20px;
+}
+.footer-div2-shape{
+  display: flex;
+  justify-content: center;
 }
 #footer-bottom{
   position: absolute;
   bottom: 0px;
   width: 100%;
   border-top: 1px rgba(150, 150, 150, 0.3) solid;
-  background: transparent;
 }
 #footer-bottom>p{
   padding: 20px 0px;
