@@ -23,6 +23,30 @@ body{
   background: #F7F7F7;
 }
 /***********************************
+              HEAD
+***********************************/
+#head{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background: #1C1C1C;
+  z-index: 20;
+}
+#head>li{
+  padding: 10px 5px;
+  margin: 0px 10px;
+  color: white;
+  font-size: 11pt;
+}
+#head>li:last-child{
+  padding: 10px 20px;
+  margin-left: auto;
+  color: red;
+  border: 1px red solid;
+  border-radius: 3px;
+}
+
+/***********************************
               NAVBAR
 ***********************************/
 #navbar-list{
@@ -30,19 +54,15 @@ body{
   display: flex;
   height: 50px;
   width: 100%;
-  margin-top: -50px;
+  margin-top: 0px;
+  padding: 0px 20px;
   background: white;
-  background: #1c1c1c;
-  /* border-bottom: 1px rgba(150, 150, 150, 0.2) solid; */
-  /* box-shadow: 0px 0px 8px -3px lightgray; */
+  background: #232323;
   z-index: 5;
 }
-/* .navbar-list-item:last-child{
-  margin-left: auto;
-} */
 .navbar-list-item{
   padding: 15px 10px;
-  margin: 0px 10px -1px;
+  margin: 0px 10px 0px;
   color: white;
   font-size: 11pt;
   cursor: pointer;
@@ -54,38 +74,69 @@ body{
   color: #ED2010;
 }
 .navbar-list-logo-item{
-  order: -1;
-  /* margin: 0px auto -5px 20px; */
+  margin: 0px auto 0px 0px;
 }
 .navbar-list-logo-item>img{
   height: 35px;
   margin: -5px;
 }
-.navbar-item-active{
-  position: relative;
-  /* background: #ED2010; */
-  margin: 2px 0px 0px 0px;
-  height: 30px;
-  /* border-radius: 5px; */
-  /* border-radius: 5px; */
-  /* border: 1px white solid; */
-  /* border-bottom: 2px #ED2010 solid; */
-}
-.navbar-item-active::before{
-  position: absolute;
-  top: 6px;
-  left: 0px;
-  content: '';
-  color: #1c1c1c;
-  height: 15px;
-  width: 70px;
-  padding: 9px 0px;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px red solid;
-}
 .navbar-item-active>a{
   color: #ED2010;
+}
+
+
+/***********************************
+              SHOWCASE
+***********************************/
+#showcase{
+  display: flex;
+
+  background: #1c1c1c;
+}
+#showcase-logo{
+  height: 80px;
+  margin: -10px auto 20px;
+}
+.navbar-search{
+  display: flex;
+  padding: 7px 0px;
+  width: 25%;
+  margin: 0px 0px 0px auto;
+}
+.navbar-search>input{
+  width: 85%;
+  padding: 12px 20px;
+  background: #1c1c1c;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px rgba(180, 180, 180, 1) solid;
+}
+.navbar-search>input:focus, #search-btn:focus, #filters-btn:focus{
+  outline-color: #ED2010;
+  z-index: 10;
+}
+#search-btn:hover, #filters-btn:hover{
+  fill: #ED2010 !important;
+  transform: scale(1.1);
+  z-index: 15;
+}
+#search-btn:active, #filters-btn:active{
+  transform: scale(1.05);
+  z-index: 15;
+}
+.navbar-search>button{
+  width: 50px;
+  padding: 4px 0px 2px;
+  margin-left: -1px;
+  background: #232323;
+  border: 1px rgba(180, 180, 180, 1) solid;
+}
+.navbar-search>button+button{
+  width: 45px;
+  padding: 6px 0px 2px;
+  fill: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /***********************************
@@ -108,76 +159,6 @@ body{
 }
 .section-title>span{
   color: #ED2010;
-}
-
-/***********************************
-              SHOWCASE
-***********************************/
-#showcase{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 28vh;
-  padding: 0px 2%;
-  margin: 50px 0px 50px 0px;
-  background: #232323;
-}
-.showcase-description{
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-}
-#showcase-logo{
-  height: 80px;
-  width: 200px;
-  margin: 0px auto;
-}
-.showcase-description>p{
-  margin: 10px 0px;
-  color: white;
-  text-align: center;
-  font-size: 22pt;
-}
-.showcase-search{
-  display: flex;
-  /* width: 80%; */
-  width: 400px;
-  margin: 20px auto 0px;
-}
-.showcase-search>input{
-  width: 85%;
-  padding: 12px 20px;
-  background: #1c1c1c;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border: 1px rgba(180, 180, 180, 1) solid;
-}
-.showcase-search>input:focus, #search-btn:focus, #filters-btn:focus{
-  outline-color: #ED2010;
-  z-index: 10;
-}
-#search-btn:hover, #filters-btn:hover{
-  fill: #ED2010 !important;
-  transform: scale(1.1);
-  z-index: 15;
-}
-#search-btn:active, #filters-btn:active{
-  transform: scale(1.05);
-  z-index: 15;
-}
-.showcase-search>button{
-  width: 50px;
-  padding: 4px 0px 2px;
-  margin-left: -1px;
-  background: #232323;
-  border: 1px rgba(180, 180, 180, 1) solid;
-}
-.showcase-search>button+button{
-  width: 45px;
-  padding: 6px 0px 2px;
-  fill: white;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 /***********************************
