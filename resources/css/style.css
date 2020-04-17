@@ -5,9 +5,10 @@
 -ORANGE: #ED2010
 ----------------------
 --------Index:--------
-1- NAVBAR
+1-HEAD
 2- SHOWCASE
-3- CATEGORIES
+3- NAVBAR
+4- CATEGORIES
 ----------------------
 **********************/
 *{
@@ -22,6 +23,7 @@
 body{
   background: #F7F7F7;
 }
+
 /***********************************
               HEAD
 ***********************************/
@@ -38,6 +40,9 @@ body{
   color: white;
   font-size: 11pt;
 }
+#head>li:hover{
+  color: #ED2010;
+}
 #head>li:last-child{
   padding: 10px 20px;
   margin-left: auto;
@@ -47,60 +52,62 @@ body{
 }
 
 /***********************************
-              NAVBAR
-***********************************/
-#navbar-list{
-  position: fixed;
-  display: flex;
-  height: 50px;
-  width: 100%;
-  margin-top: 0px;
-  padding: 0px 20px;
-  background: #232323;
-  border-top: 1px rgba(255,0,0,0.4) solid;
-  z-index: 5;
-}
-.navbar-list-item{
-  padding: 15px 10px;
-  margin: 0px 10px 0px;
-  color: white;
-  font-size: 11pt;
-  cursor: pointer;
-}
-.navbar-list-item>a{
-  text-decoration: none;
-}
-.navbar-list-item:hover{
-  color: #ED2010;
-}
-.navbar-list-logo-item{
-  margin: 0px auto 0px 0px;
-}
-.navbar-list-logo-item>img{
-  height: 35px;
-  margin: -5px;
-}
-.navbar-item-active>a{
-  color: #ED2010;
-}
-
-
-/***********************************
               SHOWCASE
 ***********************************/
 #showcase{
   display: flex;
-
   background: #1c1c1c;
 }
 #showcase-logo{
   height: 80px;
-  margin: 0px auto 20px;
+  margin: 0px auto 30px;
+}
+
+/***********************************
+              NAVBAR
+***********************************/
+#navbar{
+  width: 100%;
+  z-index: 5;
+}
+#navbar-list{
+  height: 50px;
+  display: flex;
+  padding: 0px 20px;
+  background: #232323;
+  border-top: 1px rgba(255,0,0, 0.4) solid;
+}
+.navbar-list-fixed{
+  position: fixed;
+  top: 0px;
+}
+.navbar-list-item{
+  padding: 15px 10px;
+  margin: 0px 10px 0px;
+  font-size: 11pt;
+  cursor: pointer;
+}
+.navbar-list-item>a{
+  color: white;
+  text-decoration: none;
+}
+.navbar-list-item>a:hover{
+  color: #ED2010;
+}
+.navbar-list-logo-item{
+  padding: 7px;
+  margin: 0px auto 0px 0px;
+}
+.navbar-list-logo-item>img{
+  height: 35px;
+}
+.navbar-item-active>a{
+  color: #ED2010;
 }
 .navbar-search{
   display: flex;
-  padding: 7px 0px;
   width: 25%;
+  padding: 7px 0px;
   margin: 0px 0px 0px auto;
 }
 .navbar-search>input{
@@ -404,7 +411,8 @@ body{
 ***********************************/
 footer{
   position: relative;
-  height: 390px;
+  height: 350px;
+  padding-top: 50px;
   margin-top: 100px;
   background: #1c1c1c;
   border-top: 1px rgba(150, 150, 150, 0.2) solid;
@@ -420,31 +428,53 @@ footer{
   display: flex;
   justify-content: space-around;
   width: 60%;
-  padding-top: 50px;
 }
-.div-title{
+#div-title-information, #div-title-extras, #div-title-find{
   color: #ED2010;
   font-size: 14pt;
   font-weight: 600;
+  font-family: serif;
 }
-footer li{
+.footer-div1-infos>li, .footer-div1-extra>li{
   padding: 5px 0px;
-  color: lightgray;
+  color: rgba(200, 200, 200, 0.4);
+  font-family: cursive;
   font-size: 11pt;
+}
+.footer-div1-infos>li:hover, .footer-div1-extra>li:hover{
+  color: white;
+}
+.footer-div1-find>div{
+  display: flex;
+}
+#div-title-find{
+  margin-bottom: 25px;
+  text-align: center;
+}
+.footer-div1-find>div>li{
+  padding: 15px;
+  margin: 0px 8px;
+  background: white;
+  border-radius: 50%;
+}
+.footer-div1-find>div>li:hover{
+  transform: scale(1.15);
 }
 .footer-div2{
   display: flex;
   flex-direction: column;
   width: 30%;
+  margin-top: -30px;
 }
 #footer-logo{
-  height: 100px;
-  width: 270px;
+  width: 180px;
   margin: 0px auto 20px;
 }
-.footer-div2-shape{
-  display: flex;
-  justify-content: center;
+.footer-div2-description{
+  padding: 0px 30px;
+  color: rgba(200, 200, 200, 0.4);
+  font-family: serif;
+  font-size: 11pt;
 }
 #footer-bottom{
   position: absolute;
