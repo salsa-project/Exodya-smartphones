@@ -44,7 +44,7 @@ body{
   color: #ED2010;
 }
 #head>li:last-child{
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-left: auto;
   color: red;
   border: 1px red solid;
@@ -57,10 +57,11 @@ body{
 #showcase{
   display: flex;
   background: #1c1c1c;
+  border-bottom: 2px rgba(255,0,0, 0.5) solid;
 }
 #showcase-logo{
-  height: 80px;
-  margin: 0px auto 30px;
+  height: 70px;
+  margin: -20px auto 30px;
 }
 
 /***********************************
@@ -71,21 +72,28 @@ body{
   z-index: 5;
 }
 #navbar-list{
-  height: 50px;
+  position: relative;
+  height: 60px;
   display: flex;
   padding: 0px 20px;
   background: #232323;
-  border-top: 1px rgba(255,0,0, 0.4) solid;
 }
 .navbar-list-fixed{
   position: fixed;
   top: 0px;
+  box-shadow: 0px 0px 8px 0px black;
 }
 .navbar-list-item{
-  padding: 15px 10px;
+  padding: 22px 5px;
   margin: 0px 10px 0px;
   font-size: 11pt;
   cursor: pointer;
+}
+.item-center{
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  width: 48%;
 }
 .navbar-list-item>a{
   color: white;
@@ -95,20 +103,19 @@ body{
   color: #ED2010;
 }
 .navbar-list-logo-item{
-  padding: 7px;
+  padding: 4px 50px 0px 7px;
   margin: 0px auto 0px 0px;
 }
 .navbar-list-logo-item>img{
-  height: 35px;
+  width: 200px;
 }
 .navbar-item-active>a{
   color: #ED2010;
 }
 .navbar-search{
   display: flex;
-  width: 25%;
-  padding: 7px 0px;
-  margin: 0px 0px 0px auto;
+  width: 23%;
+  padding: 11px 0px;
 }
 .navbar-search>input{
   width: 85%;
@@ -411,44 +418,56 @@ body{
 ***********************************/
 footer{
   position: relative;
-  height: 350px;
-  padding-top: 50px;
-  margin-top: 100px;
+  height: 300px;
+  padding: 40px 0px 0px;
+  margin-top: 150px;
   background: #1c1c1c;
-  border-top: 1px rgba(150, 150, 150, 0.2) solid;
-  box-shadow: 0px 0px 8px -3px lightgray;
+  border-top: 2px rgba(255, 0, 0, 0.7) solid;
+}
+.footer-head{
+  position: absolute;
+  top: -82px;
+  height: 80px;
+  width: 100%;
+  background: rgba(30, 30, 30, 0.9);
 }
 .footer-divs{
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
-  margin: 30px 0px 0px;
+  justify-content: center;
+  width: 85%;
+  margin: 0px auto 0px;
 }
 .footer-div1{
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 55%;
+}
+.footer-div1-infos, .footer-div1-extras, .footer-div1-find{
+  width: 30%;
 }
 #div-title-information, #div-title-extras, #div-title-find{
   color: #ED2010;
+  font-family: Arial;
   font-size: 14pt;
   font-weight: 600;
-  font-family: serif;
 }
 .footer-div1-infos>li, .footer-div1-extra>li{
-  padding: 5px 0px;
-  color: rgba(200, 200, 200, 0.4);
-  font-family: cursive;
+  padding: 10px 0px;
+  color: rgba(200, 200, 200, 0.9);
   font-size: 11pt;
+  font-weight: 100;
 }
 .footer-div1-infos>li:hover, .footer-div1-extra>li:hover{
   color: white;
 }
 .footer-div1-find>div{
   display: flex;
+  justify-content: center;
 }
 #div-title-find{
-  margin-bottom: 25px;
+  padding: 10px 0px;
+  margin-bottom: 35px;
   text-align: center;
 }
 .footer-div1-find>div>li{
@@ -463,30 +482,30 @@ footer{
 .footer-div2{
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin-top: -30px;
+  width: 40%;
 }
 #footer-logo{
-  width: 180px;
-  margin: 0px auto 20px;
+  width: 140px;
+  margin: 0px 0px 20px;
 }
 .footer-div2-description{
-  padding: 0px 30px;
+  width: 90%;
   color: rgba(200, 200, 200, 0.4);
   font-family: serif;
-  font-size: 11pt;
+  font-size: 12pt;
+  font-weight: 100;
 }
 #footer-bottom{
   position: absolute;
   bottom: 0px;
   width: 100%;
-  border-top: 1px rgba(150, 150, 150, 0.3) solid;
 }
 #footer-bottom>p{
-  padding: 20px 0px;
+  padding: 20px 0px 10px;
   color: white;
   text-align: center;
-  font-size: 9pt;
+  font-size: 10pt;
+  font-weight: 100;
 }
 
 /***********************************
