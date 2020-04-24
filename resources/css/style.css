@@ -20,9 +20,6 @@
   font-weight: 600;
   box-sizing: border-box;
 }
-body{
-  background: #F7F7F7;
-}
 
 /***********************************
               HEAD
@@ -81,7 +78,7 @@ body{
 .navbar-list-fixed{
   position: fixed;
   top: 0px;
-  box-shadow: 0px 0px 8px 0px black;
+  box-shadow: 0px 0px 8px -1px black;
 }
 .navbar-list-item{
   padding: 22px 5px;
@@ -156,263 +153,251 @@ body{
 /***********************************
               SECTIONS
 ***********************************/
-.section-title{
-  position: relative;
-  padding: 5px 10px 5px 0px;
-  margin: 50px 10px 10px 3vw;
-  font-size: 14pt;
-  font-weight: 600;
+.sections-header{
+  display: flex;
+  padding: 15px;
+  margin: 30px 15px;
 }
-.section-title::after{
-  position: absolute;
-  bottom: -5px;
-  left: 0px;
-  content: '';
-  width: 40px;
-  border-bottom: 2px #ED2010 solid;
+.section-title{
+  margin: 5px auto;
+  font-weight: 900;
 }
 .section-title>span{
-  color: #ED2010;
+  padding: 3px;
+  color: white;
+  background: red;
+  border-radius: 5px;
+  font-size: 15pt;
+  font-weight: 600;
+}
+.section-explorer-btn{
+  padding: 8px 30px;
+  color: white;
+  background: #222222;
+  border-width: 0px;
+  border-radius: 5px;
+}
+.section-explorer-btn:hover{
+  color: red;
+  background: rgba(200,200,200,1);
 }
 
 /***********************************
-              GUMS
+             Top Marques
 ***********************************/
-#les-gams{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 90%;
-  padding: 5px;
-  margin: 20px auto 0px;
-  background: white;
-  box-shadow: 0px 1px 2px #d9dadb;
-}
-#les-gams>div{
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-}
-.gam-c{
-  overflow: hidden;
-}
-.gam-c1{
-  width: 59%;
-  background: linear-gradient(140deg,rgba(30, 150, 50, 1),white);
-}
-.gam-c2-c3{
+.section-top{
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 40%;
-  margin-right: 10px;
 }
-.gam-c2{
-  height: 50%;
-  width: 100%;
-  background: linear-gradient(to left top,white,#081D4D);
-}
-.gam-c3{
-  height: 50%;
-  width: 100%;
-  padding-top: 10px;
-  margin-top: 10px;
-  background: linear-gradient(to left top,white,#15289F);
-}
-.gam-picture{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: rotate(-10deg);
-  mix-blend-mode: multiply;
-}
-.gam-name{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  color: white;
-  font-size: 18pt;
-}
-.gam-c2>.gam-name, .gam-c3>.gam-name{
-  height: 50%;
-}
-.gam-c1>.gam-picture{
-  background-image: url("../images/phones/Oppo-F11-64-GB-removebg-preview.png");
-}
-.gam-c2>.gam-picture{
-  height: 48%;
-  background-image: url("../images/phones/Samsung-A50-64-Gb-removebg-preview.png");
-}
-.gam-c3>.gam-picture{
-  height: 48%;
-  background-image: url("../images/phones/Xiaomi-Xiaomi-Mi-9T-128-GB-removebg-preview.png");
-}
-
-/***********************************
-              CATEGORIES
-***********************************/
-#categories{
+.section-top-items-container{
   display: flex;
   justify-content: space-around;
-  width: 90%;
-  margin: 20px auto 0px;
+  margin-bottom: 50px;
 }
-#categories>div{
+.section-top-item{
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  padding: 20px;
+  border: 1px rgba(100,100,100,0.7) solid;
+  border-radius: 15px;
+}
+.section-top-item-marque-title{
   position: relative;
-  height: 350px;
-  width: 25%;
-  border: 5px white solid;
-  margin: 5px;
-  box-shadow: 0px 1px 2px #d9dadb;
-  overflow: hidden;
-}
-.c1{
-  background: linear-gradient(to right bottom, white, rgba(30, 150, 50, 1));
-}
-.c2{
-  background: linear-gradient(to right bottom,white,#081D4D);
-}
-.c3{
-  background: linear-gradient(to right bottom,white,#15289F);
-}
-.c4{
-  background: linear-gradient(to right bottom,white,black);
-}
-.categorie-picture{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  transform: rotate(-10deg);
-  mix-blend-mode: multiply;
-}
-.categorie-name{
-  position: relative;
-  top: 90%;
-  width: 101%;
-  padding: 5px 20px;
-  color: white;
-  background: #ED2010;
-  font-size: 18pt;
+  min-width: 150px;
+  padding: 15px 5px;
+  margin: 0px auto;
   text-align: center;
-  mix-blend-mode: exclusion;
 }
-.c1>.categorie-picture{
-  background-image: url("../images/phones/LG-K40-removebg-preview.png");
+.section-top-item-marque-title::after{
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  content: '';
+  width: 120px;
+  padding: 0.5px 0px;
+  background: rgba(100,100,100,0.7);
 }
-.c2>.categorie-picture{
-  background-image: url("../images/phones/Oppo-F11-64-GB-removebg-preview.png");
+.section-top-item-logo{
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  background: red;
 }
-.c3>.categorie-picture{
-  background-image: url("../images/phones/Samsung-A50-64-Gb-removebg-preview.png");
+.section-top-item-marque-title+p{
+  min-width: 100px;
+  padding: 20px;
+  margin: 5px auto;
+  font-size: 15pt;
+  font-weight: 900;
 }
-.c4>.categorie-picture{
-  background-image: url("../images/phones/Xiaomi-Xiaomi-Mi-9T-128-GB-removebg-preview.png");
+.section-top-item-derniers-btn{
+  width: 70%;
+  padding: 10px;
+  margin: 10px auto;
+  color: white;
+  background: red;
+  border-width: 0px;
+  border-radius: 5px;
+  font-size: 12pt;
+}
+.section-top-item-derniers-btn:hover{
+  color: red;
+  background: rgba(200,200,200,1);
 }
 
 /***********************************
-           LES DERNIERS
+         Derniers-coming
 ***********************************/
+/***********************************
+             Derniers
+***********************************/
+.section-derniers-coming{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.section-derniers-coming-header{
+  justify-content: space-between;
+}
+.section-derniers-coming-header .section-title{
+  margin: 0px;
+}
+.section-derniers{
+  width: 55%;
+}
+.section-derniers-items-container{
+  display: flex;
+  justify-content: space-between;
+}
+.section-derniers-item{
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  border: 1px rgba(100,100,100, 0.7) solid;
+  border-radius: 15px;
+}
+.section-derniers-item-title{
+  position: relative;
+  min-width: 150px;
+  padding: 15px 5px;
+  margin: 0px auto;
+  text-align: center;
+}
+.section-derniers-item-title::after{
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  content: '';
+  width: 120px;
+  padding: 0.5px 0px;
+  background: rgba(100,100,100,0.7);
+}
+.section-derniers-item-title+img{
+  height: 250px;
+  margin: 20px auto;
+}
+.section-derniers-item-title+img+.section-explorer-btn{
+  margin: 10px auto 20px;
+}
+
+/***********************************
+             coming
+***********************************/
+.section-coming{
+  width: 40%;
+}
+.section-coming-items-container{
+  box-shadow: 0px 0px 6px -3px gray;
+}
 #les-derniers{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 20px auto 0px;
 }
 .les-derniers-categorie{
-  position: relative;
-  width: 40%;
+  width: 50%;
   background: white;
   border: 1px lightgray solid;
-  border-radius: 3px;
-  box-shadow: 0px 1px 2px #d9dadb;
 }
-.les-derniers-categorie-title{
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  padding: 10px 15px;
-  color: #ED2010;
-  background: #f7f7f7;
-  border-radius: 50%;
-  font-size: 12pt;
-  font-weight: 600;
-  transform: translateX(-50%);
+.les-derniers-categorie:first-child{
+  border-right: 0px;
+}
+.les-derniers-categorie:last-child{
+  border-left: 0px;
 }
 .les-derniers-item{
   display: flex;
   align-items: center;
 }
-.les-derniers-item:nth-child(2){
-  padding-top: 10px;
-}
 .les-derniers-item:not(:last-child){
   border-bottom: 1px lightgray solid;
-}
-.les-derniers-item-number{
-  margin: 3px 5px 3px 12px;
-  color: rgba(237, 32, 16, 0.5);
-  font-size: 12pt;
-  font-weight: 600;
 }
 .les-derniers-item-image{
   height: 40px;
   margin: 5px 20px 3px 10px;
 }
-.coming-soon .les-derniers-item-image{
-  height: 40px;
-  margin: 5px 20px 3px 10px;
-  filter: grayscale(1);
-}
 .les-derniers-item-name{
-  font-size: 11pt;
+  font-size: 10pt;
 }
 
 /***********************************
                  VS
 ***********************************/
-#vs-section{
+.section-similaire-items-container{
   display: flex;
-  justify-content: space-between;
-  width: 90%;
-  padding: 20px 0px;
-  margin: 20px auto;
-  background: white;
-  box-shadow: 0px 1px 2px #d9dadb;
+  justify-content: space-around;
+}
+.section-similaire-item{
+  width: 240px;
+  padding: 20px 10px;
+  border: 1px rgba(100,100,100, 0.7) solid;
+  border-radius: 15px;
 }
 .phone-vs-phone{
   position: relative;
   display: flex;
   height: 140px;
   width: 250px;
-  margin: 0px 5px 0px;
   overflow: hidden;
 }
 .phone-vs-phone-picture{
   height: 300px;
-  width: 45%;
+  width: 40%;
   margin: 0px 5px;
 }
 .vs{
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 5px 5px 2px;
+  padding: 10px 8px 5px;
   background: white;
   border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-95%) translateY(-30%);
+  box-shadow: 0px 0px 5px -1px gray;
 }
-
+.phoneName-vs-phoneName{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.phoneName{
+  padding: 10px;
+}
+.phoneName-vs{
+  padding: 4px 4px 2px;
+  margin: 10px;
+  color: white;
+  background: red;
+  border-radius: 5px;
+}
+.section-similaire-item>.section-explorer-btn{
+  position: relative;
+  left: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+}
 /***********************************
                FOOTER
 ***********************************/
