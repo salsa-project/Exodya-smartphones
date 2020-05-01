@@ -1,8 +1,9 @@
 const navbar = document.getElementById('navbar');
 const acceuil = document.getElementsByClassName('navbar-list-item')[1];
-const comparateur = document.getElementsByClassName('navbar-list-item')[2];
-const phones = document.getElementsByClassName('navbar-list-item')[3];
-const apropos = document.getElementsByClassName('navbar-list-item')[4];
+const lesMarques = document.getElementsByClassName('navbar-list-item')[2];
+const lesDernies = document.getElementsByClassName('navbar-list-item')[3];
+const comming = document.getElementsByClassName('navbar-list-item')[4];
+const similar = document.getElementsByClassName('navbar-list-item')[5];
 
 // Fixed navbar
 window.addEventListener("scroll", function (e) {
@@ -23,6 +24,6 @@ switch(window.location.pathname){
   acceuil.classList.add('navbar-item-active');
   break;
   case "/single.html":
-  phones.classList.add('navbar-item-active');
+  lesMarques.classList.add('navbar-item-active');
   break;
 }

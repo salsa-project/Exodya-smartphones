@@ -398,6 +398,52 @@
   width: 70%;
   transform: translateX(-50%);
 }
+
+/* TOP MARQUES SMARTPHONES */
+/***********************************
+         top marques page
+***********************************/
+.top-marques-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#sections-top-marques .section-top-item{
+  margin-bottom: 40px;
+}
+.pagination-contanier{
+  display: flex;
+  justify-content: center;
+  width: 360px;
+  margin: 30px auto;
+  box-shadow: 0px 1px 4px -1px lightgray;
+}
+.pagination-item{
+  width: 60px;
+  padding: 15px 0px;
+  background: white;
+  border: 1px rgba(70,70,70,0.1) solid;
+  text-align: center;
+  cursor: pointer;
+}
+.pagination-item:hover:not(:first-child):not(:last-child){
+  color: red;
+  background: rgba(200,200,200,1);
+}
+.pagination-left-arrow, .pagination-right-arrow{
+  background-image: url('/resources/images/icons/left-arrow.png');
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pagination-right-arrow{
+  background-image: url('/resources/images/icons/right-arrow.png');
+}
+.active-page{
+  color: white !important;
+  background: red !important;
+  border-color: red;
+}
 /***********************************
                FOOTER
 ***********************************/
