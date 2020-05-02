@@ -271,6 +271,7 @@
 .section-derniers-items-container{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section-derniers-item{
   display: flex;
@@ -347,6 +348,7 @@
 .section-similaire-items-container{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .section-similaire-item{
   width: 240px;
@@ -411,6 +413,34 @@
 #sections-top-marques .section-top-item{
   margin-bottom: 40px;
 }
+/***********************************
+        les derniers page
+***********************************/
+#sections-les-derniers .section-derniers-items-container{
+  justify-content: space-around;
+}
+#sections-les-derniers .section-derniers-item{
+  width: 22%;
+  margin-bottom: 40px;
+}
+/***********************************
+            Les Similaires
+***********************************/
+#sections-similaires .section-similaire-item{
+  width: 22%;
+  margin-bottom: 40px;
+}
+#sections-similaires .phone-vs-phone{
+  display: flex;
+  justify-content: center;
+}
+#sections-similaires .vs{
+  transform: translateX(-50%);
+}
+
+/***********************************
+            Pagination
+***********************************/
 .pagination-contanier{
   display: flex;
   justify-content: center;

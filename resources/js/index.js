@@ -23,7 +23,10 @@ switch(window.location.pathname){
   case "/index.html":
   acceuil.classList.add('navbar-item-active');
   break;
-  case "/single.html":
+  case "/marques.html":
   lesMarques.classList.add('navbar-item-active');
+  break;
+  case "/derniers.html":
+  lesDernies.classList.add('navbar-item-active');
   break;
 }
