@@ -46,6 +46,7 @@
   color: red;
   border: 1px red solid;
   border-radius: 3px;
+  transition: all 0.5s ease;
 }
 
 /***********************************
@@ -148,6 +149,55 @@
   fill: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.search-bar-options-layer{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 5;
+}
+.search-bar-options{
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.search-bar-options-header>p{
+  padding: 25px 20px 20px;
+  font-size: 15pt;
+  text-align: center;
+}
+.search-bar-items-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+.search-bar-item{
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+  padding: 10px;
+}
+.search-bar-item>select{
+  padding: 8px 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-width: 0px;
+  transform: translateY(-5px);
+
+}
+.search-bar-item>select>option{
+
+}
+.search-bar-options-bottom>button{
+  float: right;
+  margin: 15px 30px 15px 15px;
 }
 
 /***********************************
