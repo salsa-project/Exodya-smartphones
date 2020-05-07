@@ -4,6 +4,9 @@ const lesMarques = document.getElementsByClassName('navbar-list-item')[2];
 const lesDernies = document.getElementsByClassName('navbar-list-item')[3];
 const comming = document.getElementsByClassName('navbar-list-item')[4];
 const similar = document.getElementsByClassName('navbar-list-item')[5];
+const rechercheLayer = document.getElementsByClassName('search-bar-options-layer')[0];
+const rechercheFilterBtn = document.getElementById("filters-btn");
+const rechercheBox = document.getElementsByClassName('search-bar-options')[0];
 
 // Fixed navbar
 window.addEventListener("scroll", function (e) {
@@ -30,3 +33,13 @@ switch(window.location.pathname){
   lesDernies.classList.add('navbar-item-active');
   break;
 }
+
+// display/hide recherche avancé
+rechercheFilterBtn.addEventListener('click', function(){
+  rechercheLayer.classList.toggle('search-bar-options-layer-visible');
+})
+window.addEventListener('click', function(e){
+  if(rechercheLayer.contains(e.target) && !rechercheBox.contains(e.target)){
+    rechercheLayer.classList.toggle('search-bar-options-layer-visible')
+  }
+})

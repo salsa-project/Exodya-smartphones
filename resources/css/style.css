@@ -151,7 +151,7 @@
   border-bottom-right-radius: 5px;
 }
 .search-bar-options-layer{
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   height: 100vh;
@@ -159,9 +159,12 @@
   background: rgba(0,0,0,0.8);
   z-index: 5;
 }
+.search-bar-options-layer-visible{
+  display: none;
+}
 .search-bar-options{
   position: absolute;
-  top: 50vh;
+  top: 0vh;
   left: 50%;
   width: 50%;
   background: white;
