@@ -205,8 +205,7 @@
 ***********************************/
 .sections-header{
   display: flex;
-  padding: 15px;
-  margin: 30px 15px;
+  margin: 30px auto;
 }
 .section-title{
   margin: 5px auto;
@@ -235,52 +234,90 @@
 /***********************************
              Top Marques
 ***********************************/
+#index .section-top .sections-header{
+  width: 90%;
+}
 .section-top{
   display: flex;
   flex-direction: column;
 }
 .section-top-items-container{
+  position: relative;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px auto 50px;
+}
+.left-arrow-slider, .right-arrow-slider{
+  position: absolute;
+  top: 40%;
+  left: -65px;
+  border: 25px red solid;
+  border-color: transparent red transparent transparent;
+}
+.right-arrow-slider{
+  right: -65px;
+  left: auto;
+  border-color: transparent transparent transparent red;
+}
+.left-arrow-slider:hover{
+  animation: bounce 0.6s infinite ease;
+}
+.right-arrow-slider:hover{
+  animation: bounce 0.6s infinite ease alternate;
+}
+@keyframes bounce{
+  0%{transform: translateX(0px);}
+  50%{transform: translateX(-5px);}
+}
+.left-arrow-slider-child, .right-arrow-slider-child{
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  border: 20px gray solid;
+  border-color: transparent white transparent transparent;
+}
+.right-arrow-slider-child{
+  right: -10px;
+  left: auto;
+  border-color: transparent transparent transparent white;
 }
 .section-top-item{
   display: flex;
   flex-direction: column;
   width: 22%;
   padding: 20px;
-  border: 1px rgba(100,100,100,0.7) solid;
+  border: 1px rgba(100,100,100,0.5) solid;
   border-radius: 15px;
+  box-shadow: 0px 0px 8px -3px lightgray;
 }
 .section-top-item-marque-title{
   position: relative;
   min-width: 150px;
-  padding: 15px 5px;
+  padding: 0px 0px 10px;
   margin: 0px auto;
   text-align: center;
 }
 .section-top-item-marque-title::after{
   position: absolute;
-  bottom: 0px;
+  bottom: -5px;
   left: 10px;
   content: '';
-  width: 120px;
+  width: 140px;
   padding: 0.5px 0px;
-  background: rgba(100,100,100,0.7);
+  background: rgba(100,100,100,0.3);
 }
 .section-top-item-logo{
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  height: 20px;
-  width: 20px;
-  background: red;
+  width: 50px;
+  margin: 0px 0px -5px -15px;
+  border-radius: 50%;
 }
 .section-top-item-marque-title+p{
   min-width: 100px;
   padding: 20px;
-  margin: 5px auto;
-  font-size: 15pt;
+  margin: 15px auto 0px;
+  color: gray;
+  font-size: 13pt;
   font-weight: 900;
 }
 .section-top-item-derniers-btn{
@@ -291,7 +328,7 @@
   background: red;
   border-width: 0px;
   border-radius: 5px;
-  font-size: 12pt;
+  font-size: 11pt;
 }
 .section-top-item-derniers-btn:hover{
   color: red;
