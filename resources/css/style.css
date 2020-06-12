@@ -220,6 +220,7 @@
   font-weight: 600;
 }
 .section-explorer-btn{
+  height: 38px;
   padding: 8px 30px;
   color: white;
   background: #222222;
@@ -343,11 +344,14 @@
 ***********************************/
 .section-derniers-coming{
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0px auto 50px;
 }
 .section-derniers-coming-header{
   justify-content: space-between;
+  align-items: center;
+  height: 38px;
 }
 .section-derniers-coming-header .section-title{
   margin: 0px;
@@ -361,16 +365,19 @@
   flex-wrap: wrap;
 }
 .section-derniers-item{
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 350px;
   width: 32%;
   border: 1px rgba(100,100,100, 0.7) solid;
   border-radius: 15px;
+  box-shadow: 0px 0px 8px -3px lightgray;
 }
 .section-derniers-item-title{
   position: relative;
   min-width: 150px;
-  padding: 15px 5px;
+  padding: 10px 5px;
   margin: 0px auto;
   text-align: center;
 }
@@ -384,11 +391,24 @@
   background: rgba(100,100,100,0.7);
 }
 .section-derniers-item-title+img{
-  height: 250px;
+  height: 80%;
   margin: 20px auto;
+  transition: all 0.3s ease;
 }
-.section-derniers-item-title+img+.section-explorer-btn{
-  margin: 10px auto 20px;
+.section-derniers-item-title+img:hover{
+  transform: translateY(-90px) rotate(15deg);
+}
+.section-derniers-item-btn-container{
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px -20px 15px 0px white;
 }
 
 /***********************************
