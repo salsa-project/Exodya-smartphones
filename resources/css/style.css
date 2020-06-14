@@ -205,7 +205,7 @@
 ***********************************/
 .sections-header{
   display: flex;
-  margin: 30px auto;
+  margin: 50px auto 30px;
 }
 .section-title{
   margin: 5px auto;
@@ -235,21 +235,26 @@
 /***********************************
              Top Marques
 ***********************************/
-#index .section-top .sections-header{
-  width: 90%;
+.sections-header{
+  width: 100%;
 }
 .section-top{
   display: flex;
   flex-direction: column;
+  width: 90%;
+  margin: 0px auto;
+}
+.section-top .section-title{
+  transform: translateX(25%);
 }
 .section-top-items-container{
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin: 20px auto 50px;
+  width: 100%;
+  margin: 0px auto 30px;
 }
-.left-arrow-slider, .right-arrow-slider{
+/*.left-arrow-slider, .right-arrow-slider{
   position: absolute;
   top: 40%;
   left: -65px;
@@ -282,24 +287,25 @@
   right: -10px;
   left: auto;
   border-color: transparent transparent transparent white;
-}
+}*/
 .section-top-item{
   display: flex;
   flex-direction: column;
-  width: 22%;
-  padding: 20px;
-  border: 1px rgba(100,100,100,0.5) solid;
+  width: 18%;
+  padding: 0px 0px 15px;
+  border: 1px rgba(100,100,100,0.4) solid;
   border-radius: 15px;
-  box-shadow: 0px 0px 8px -3px lightgray;
+  box-shadow: 0px 0px 6px -3px gray;
+  overflow: hidden;
 }
 .section-top-item-marque-title{
-  position: relative;
-  min-width: 150px;
-  padding: 0px 0px 10px;
+  width: 100%;
+  padding: 15px 0px;
   margin: 0px auto;
+  background: rgba(240, 240, 240, 0.5);
   text-align: center;
 }
-.section-top-item-marque-title::after{
+/*.section-top-item-marque-title::after{
   position: absolute;
   bottom: -5px;
   left: 10px;
@@ -307,7 +313,7 @@
   width: 140px;
   padding: 0.5px 0px;
   background: rgba(100,100,100,0.3);
-}
+}*/
 .section-top-item-logo{
   width: 50px;
   margin: 0px 0px -5px -15px;
@@ -315,8 +321,8 @@
 }
 .section-top-item-marque-title+p{
   min-width: 100px;
-  padding: 20px;
-  margin: 15px auto 0px;
+  padding: 10px;
+  margin: 15px auto 10px;
   color: gray;
   font-size: 13pt;
   font-weight: 900;
@@ -324,7 +330,7 @@
 .section-top-item-derniers-btn{
   width: 70%;
   padding: 10px;
-  margin: 10px auto;
+  margin: 10px auto 0px;
   color: white;
   background: red;
   border-width: 0px;
@@ -346,7 +352,7 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: 0px auto 50px;
+  margin: 0px auto 80px;
 }
 .section-derniers-coming-header{
   justify-content: space-between;
@@ -370,29 +376,23 @@
   flex-direction: column;
   height: 350px;
   width: 32%;
-  border: 1px rgba(100,100,100, 0.7) solid;
+  border: 1px rgba(100,100,100, 0.5) solid;
   border-radius: 15px;
-  box-shadow: 0px 0px 8px -3px lightgray;
+  box-shadow: 0px 0px 6px -3px gray;
 }
 .section-derniers-item-title{
-  position: relative;
-  min-width: 150px;
-  padding: 10px 5px;
+  width: 100%;
+  padding: 12px 0px;
   margin: 0px auto;
+  background: rgba(240, 240, 240, 0.7);
+  border-radius: 15px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   text-align: center;
 }
-.section-derniers-item-title::after{
-  position: absolute;
-  bottom: 0px;
-  left: 10px;
-  content: '';
-  width: 120px;
-  padding: 0.5px 0px;
-  background: rgba(100,100,100,0.7);
-}
 .section-derniers-item-title+img{
-  height: 80%;
-  margin: 20px auto;
+  height: 82%;
+  margin: 10px auto;
   transition: all 0.3s ease;
 }
 .section-derniers-item-title+img:hover{
@@ -428,11 +428,17 @@
   background: white;
   border: 1px lightgray solid;
 }
-.les-derniers-categorie:first-child{
+.les-derniers-categorie:first-of-type{
   border-right: 0px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
-.les-derniers-categorie:last-child{
+.les-derniers-categorie:last-of-type{
   border-left: 0px;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 .les-derniers-item{
   display: flex;
@@ -442,8 +448,9 @@
   border-bottom: 1px lightgray solid;
 }
 .les-derniers-item-image{
-  height: 40px;
-  margin: 5px 20px 3px 10px;
+  height: 61px;
+  padding: 3px;
+  margin: 5px 20px 3px 15px;
 }
 .les-derniers-item-name{
   font-size: 10pt;
@@ -452,9 +459,16 @@
 /***********************************
                  VS
 ***********************************/
+.section-comparisons{
+  width: 90%;
+  margin: 0px auto;
+}
+.section-comparisons .section-title{
+  transform: translateX(25%);
+}
 .section-similaire-items-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .section-similaire-item{
