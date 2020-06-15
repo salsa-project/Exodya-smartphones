@@ -20,6 +20,9 @@
   font-weight: 600;
   box-sizing: border-box;
 }
+*:focus{
+  outline-width: 0px;
+}
 
 /***********************************
               HEAD
@@ -158,6 +161,7 @@
   width: 100%;
   background: rgba(0,0,0,0.8);
   z-index: 5;
+  overflow: hidden;
 }
 .search-bar-options-layer-visible{
   display: none;
@@ -224,19 +228,35 @@
   padding: 8px 30px;
   color: white;
   background: #222222;
-  border-width: 0px;
   border-radius: 5px;
 }
-.section-explorer-btn:hover{
-  color: red;
-  background: rgba(200,200,200,1);
+.btn-active-scale-fx{
+  border: 1px solid;
+  border-color: inherit;
 }
-
-/***********************************
+.btn-active-scale-fx:hover{
+  color: red;
+  background: white !important;
+  border: 1px rgba(100,100,100,0.5) solid; 
+  box-shadow: 0px 0px 5px lightgray;
+}
+.btn-active-scale-fx:active{
+  box-shadow: inset 2px 2px 5px gray;
+}
+.btn-active-scale-fx:focus{
+  outline-width: 0px;
+}
+button{
+  cursor: pointer;
+}
+  
+  
+  /***********************************
              Top Marques
 ***********************************/
 .sections-header{
   width: 100%;
+  margin-top: 70px;
 }
 .section-top{
   display: flex;
@@ -293,7 +313,7 @@
   flex-direction: column;
   width: 18%;
   padding: 0px 0px 15px;
-  border: 1px rgba(100,100,100,0.4) solid;
+  border: 1px rgba(100,100,100,0.2) solid;
   border-radius: 15px;
   box-shadow: 0px 0px 6px -3px gray;
   overflow: hidden;
@@ -305,15 +325,6 @@
   background: rgba(240, 240, 240, 0.5);
   text-align: center;
 }
-/*.section-top-item-marque-title::after{
-  position: absolute;
-  bottom: -5px;
-  left: 10px;
-  content: '';
-  width: 140px;
-  padding: 0.5px 0px;
-  background: rgba(100,100,100,0.3);
-}*/
 .section-top-item-logo{
   width: 50px;
   margin: 0px 0px -5px -15px;
@@ -333,13 +344,12 @@
   margin: 10px auto 0px;
   color: white;
   background: red;
-  border-width: 0px;
+  border-width: 1px;
   border-radius: 5px;
   font-size: 11pt;
 }
 .section-top-item-derniers-btn:hover{
   color: red;
-  background: rgba(200,200,200,1);
 }
 
 /***********************************
@@ -376,7 +386,7 @@
   flex-direction: column;
   height: 350px;
   width: 32%;
-  border: 1px rgba(100,100,100, 0.5) solid;
+  border: 1px rgba(100,100,100, 0.2) solid;
   border-radius: 15px;
   box-shadow: 0px 0px 6px -3px gray;
 }
@@ -472,22 +482,24 @@
   flex-wrap: wrap;
 }
 .section-similaire-item{
-  width: 240px;
+  width: 18%;
   padding: 20px 10px;
-  border: 1px rgba(100,100,100, 0.7) solid;
+  border: 1px rgba(100,100,100, 0.2) solid;
   border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 6px -3px gray;
 }
 .phone-vs-phone{
   position: relative;
   display: flex;
   height: 140px;
-  width: 250px;
   overflow: hidden;
 }
 .phone-vs-phone-picture{
   height: 300px;
-  width: 40%;
-  margin: 0px 5px;
+  width: 47%;
+  margin: 0px 3px;
+  transition: transform 0.3s ease;
 }
 .vs{
   position: absolute;
@@ -496,30 +508,30 @@
   padding: 10px 8px 5px;
   background: white;
   border-radius: 50%;
-  transform: translateX(-95%) translateY(-30%);
+  transform: translateX(-50%) translateY(-30%);
   box-shadow: 0px 0px 5px -1px gray;
+  z-index: 1;
 }
 .phoneName-vs-phoneName{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
 }
 .phoneName{
-  padding: 10px;
+  padding: 5px;
+  color: gray;
+  font-size: 10pt;
 }
 .phoneName-vs{
   padding: 4px 4px 2px;
-  margin: 10px;
+  margin: 5px;
   color: white;
   background: red;
   border-radius: 5px;
 }
 .section-similaire-item>.section-explorer-btn{
-  position: relative;
-  left: 50%;
   width: 70%;
-  transform: translateX(-50%);
 }
 
 /* TOP MARQUES SMARTPHONES */
