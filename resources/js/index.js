@@ -1,4 +1,3 @@
-const navbar = document.getElementById('navbar');
 const acceuil = document.getElementsByClassName('navbar-list-item')[1];
 const lesMarques = document.getElementsByClassName('navbar-list-item')[2];
 const lesDernies = document.getElementsByClassName('navbar-list-item')[3];
