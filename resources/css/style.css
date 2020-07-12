@@ -811,7 +811,7 @@ footer{
 * *{background: rgba(0,255,0, 0.1);}
 * * *{background: rgba(0,0,255, 0.1);} */
 
-@media(max-width: 400px){
+@media(max-width: 500px){
 
   /*********head**********/
   #head, #showcase{
@@ -852,7 +852,7 @@ footer{
     position: fixed;
     height: 100%;
     width: 100%;
-    background: yellow;
+    background: rgba(0,0,0, 0.5);
     z-index: 10;
   }
   #navbar-list{
