@@ -1,3 +1,6 @@
+const mobileMenuIcon = document.getElementById('nav-mobile-icon');
+const navLayer = document.getElementsByClassName('nav-layer')[0];
+const navList = document.getElementById('navbar-list');
 const acceuil = document.getElementsByClassName('navbar-list-item')[1];
 const lesMarques = document.getElementsByClassName('navbar-list-item')[2];
 const lesDernies = document.getElementsByClassName('navbar-list-item')[3];
@@ -7,15 +10,16 @@ const rechercheLayer = document.getElementsByClassName('search-bar-options-layer
 const rechercheFilterBtn = document.getElementById("filters-btn");
 const rechercheBox = document.getElementsByClassName('search-bar-options')[0];
 
+
 // Fixed navbar
-window.addEventListener("scroll", function (e) {
-    var scrollPxs = this.scrollY;
-    if(scrollPxs > 125){
-      navbar.classList.add('navbar-list-fixed');
-    }else{
-      navbar.classList.remove('navbar-list-fixed');
-    }
-});
+// window.addEventListener("scroll", function (e) {
+//     var scrollPxs = this.scrollY;
+//     if(scrollPxs > 125){
+//       navbar.classList.add('navbar-list-fixed');
+//     }else{
+//       navbar.classList.remove('navbar-list-fixed');
+//     }
+// });
 
 
 
@@ -40,5 +44,20 @@ rechercheFilterBtn.addEventListener('click', function(){
 window.addEventListener('click', function(e){
   if(rechercheLayer.contains(e.target) && !rechercheBox.contains(e.target)){
     rechercheLayer.classList.toggle('search-bar-options-layer-visible')
+  }
+})
+
+// toggle mobile menu
+mobileMenuIcon.addEventListener('click', function(){
+  navLayer.classList.toggle('nav-layer-hide');
+})
+
+//
+window.addEventListener('click', function(e){
+  if(navLayer.contains(e.target) && !navList.contains(e.target) ){
+      navList.style.transform = 'translateX(-100%)';
+    setTimeout(function(){
+      navLayer.classList.toggle('nav-layer-hide');
+    }, 300)
   }
 })
