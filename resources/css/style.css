@@ -831,15 +831,64 @@ footer{
     background: #232323;
     z-index: 20;
   }
-  #nav-mobile-icon{
+  /* #nav-mobile-icon{
     height: 30px;
+    width: 40px;
+    border: 1px red solid;
+  } */ 
+
+  /* menu icon */
+   .menu-icon {
+    cursor: pointer;
+    user-select: none;
+  }  
+   .menu-icon .navicon {
+    background: red;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 25px;
+  }  
+   .menu-icon .navicon:before,
+   .menu-icon .navicon:after {
+    background: red;
+    content: '';
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }  
+   .menu-icon .navicon:before {
+    top: 8px;
+  }  
+   .menu-icon .navicon:after {
+    top: -8px;
+  }  
+  /* menu btn */
+   .menu-btn {
+    display: none;
+  }  
+   .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }  
+   .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }  
+   .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }  
+   .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+   .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
   }
-  #nav-mobile>.btn-active-scale-fx{
+  
+  /* #nav-mobile>.btn-active-scale-fx{
     padding: 10px;
     color: red;
     background: none;
     border-radius: 5px;<<Q    
-  }
+  } */
   .nav-layer{
     position: fixed;
     height: 100%;
@@ -860,17 +909,27 @@ footer{
     height: 100%;
     width: 80vw;
     padding: 60px 0px 0px;
+    transform: translateX(-100%);
     transition: all 0.3s ease;
   }
   .navbar-search{
+    position: relative;
     width: 90%;
+  }
+  .navbar-search::after{
+    position: absolute;
+    top: 90px;
+    content: '';
+    width: 100%;
+    border: 0.5px rgba(255,255,255,0.1) solid;
   }
   .item-center{
     flex-direction: column;
+    
   }
   .navbar-list-item{
     width: 90%;
-    margin: 8px 0px;
+    margin: 0px 0px;
     text-align: center;
   }
   .navbar-list-logo-item{

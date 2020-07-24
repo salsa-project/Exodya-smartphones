@@ -1,4 +1,4 @@
-const mobileMenuIcon = document.getElementById('nav-mobile-icon');
+const mobileMenuIcon = document.getElementById('menu-btn');
 const navLayer = document.getElementsByClassName('nav-layer')[0];
 const navList = document.getElementById('navbar-list');
 const acceuil = document.getElementsByClassName('navbar-list-item')[1];
@@ -50,14 +50,23 @@ window.addEventListener('click', function(e){
 // toggle mobile menu
 mobileMenuIcon.addEventListener('click', function(){
   navLayer.classList.toggle('nav-layer-hide');
+  setTimeout(function(){
+    if(navLayer.classList[1] !== 'nav-layer-hide'){
+      navList.style.transform = 'translateX(0%)';
+    }else{
+      navList.style.transform = 'translateX(-100%)';
+    }
+    }, 100)
 })
 
 //
 window.addEventListener('click', function(e){
   if(navLayer.contains(e.target) && !navList.contains(e.target) ){
+    
       navList.style.transform = 'translateX(-100%)';
     setTimeout(function(){
       navLayer.classList.toggle('nav-layer-hide');
+      mobileMenuIcon.checked = false;
     }, 300)
   }
 })
