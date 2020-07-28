@@ -276,9 +276,6 @@ button{
 .section-top .section-title{
   transform: translateX(25%);
 }
-.section-top-items-container{
-
-}
 #section-top-items-slide{
   display: flex;
   justify-content: space-between;
@@ -286,6 +283,7 @@ button{
   margin: 0px auto 30px;
 }
 .left-arrow-slider, .right-arrow-slider{
+  display: none;
   position: absolute;
   top: 40%;
   left: -15px;
@@ -989,16 +987,50 @@ footer{
     justify-content: center;
     transition: all 0.2s ease;
   }
+  .left-arrow-slider, .right-arrow-slider{
+    display: block;
+  }
   .section-top-item{
     position: absolute;
     top: 0px;
     width: 70vw;
   } 
 
+  /********* les-derniers comming-soon ********/
+  .section-derniers-coming{
+    height: 2000px;
+    width: 100%;
+  }
+  .section-derniers{
+    position: relative;
+    height: 550px;
+    width: auto;
+    overflow-x: hidden;
+    background-color: red;
+  }
+  .section-derniers-items-container{
+    justify-content: center;
+    
+  }
+  .section-derniers-item{
+    position: absolute;
+    height: 400px;
+    width: 70vw;
+  }
+  .section-derniers-item-title+img{
+    height: 85%;
+  }
+  .dernier-right-arrow, .dernier-left-arrow{
+    top: 300px;
+  }
 
 
 
 
+  .section-coming{
+    top: 480px;
+    width: auto;
+  }
 
 
 
