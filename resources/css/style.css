@@ -290,19 +290,21 @@ button{
   top: 40%;
   left: -15px;
   border: 25px red solid;
-  border-color: transparent red transparent transparent;
+  border-color: transparent #232323 transparent transparent;
   z-index: 10;
 }
 .right-arrow-slider{
   right: -15px;
   left: auto;
+  border-color: transparent transparent transparent #232323;
+}
+.left-arrow-slider:active{
+  border-color: transparent red transparent transparent;
+  transform: scale(1.1);
+}
+.right-arrow-slider:active{
   border-color: transparent transparent transparent red;
-}
-.left-arrow-slider:hover{
-  animation: bounce 0.6s infinite ease;
-}
-.right-arrow-slider:hover{
-  animation: bounce 0.6s infinite ease alternate;
+  transform: scale(1.1);
 }
 @keyframes bounce{
   0%{transform: translateX(0px);}
@@ -985,13 +987,12 @@ footer{
   }
   #section-top-items-slide{
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
   .section-top-item{
     position: absolute;
     top: 0px;
-    width: 70%;
-    background: white;
+    width: 70vw;
   } 
 
 

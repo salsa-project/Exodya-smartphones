@@ -44,13 +44,13 @@ Array.from(sectionTopItems).forEach(item => {
 // slider L/R triggers
 let slideLimit = 0;
 let fullWidth = 0;
-sliderArrowL.addEventListener('click', function(){
+sliderArrowR.addEventListener('click', function(){
   if(slideLimit == 4) return;
   fullWidth += sectionTopItems[0].offsetWidth + 200;
   sectionTopSlide.style = `transform: translateX(${-fullWidth}px);`;
   slideLimit++;
 })
-sliderArrowR.addEventListener('click', function(){
+sliderArrowL.addEventListener('click', function(){
   if(slideLimit == 0) return;
   fullWidth -= sectionTopItems[0].offsetWidth + 200;
   sectionTopSlide.style = `transform: translateX(${-fullWidth}px);`;
