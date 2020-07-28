@@ -981,11 +981,11 @@ footer{
     position: relative;
     height: 250px;
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
   #section-top-items-slide{
     justify-content: center;
-    /* transform: translateX(-450px); */
+    transition: all 0.3s ease;
   }
   .section-top-item{
     position: absolute;
