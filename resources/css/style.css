@@ -286,13 +286,13 @@ button{
   display: none;
   position: absolute;
   top: 40%;
-  left: -15px;
-  border: 25px red solid;
+  left: 5px;
+  border: 15px red solid;
   border-color: transparent #232323 transparent transparent;
   z-index: 10;
 }
 .right-arrow-slider{
-  right: -15px;
+  right: 5px;
   left: auto;
   border-color: transparent transparent transparent #232323;
 }
@@ -444,7 +444,7 @@ button{
   border-radius: 15px;
   box-shadow: 0px 0px 6px -3px gray;
 }
-#les-derniers{
+.comming-slider{
   display: flex;
 }
 .les-derniers-categorie{
@@ -998,19 +998,20 @@ footer{
 
   /********* les-derniers comming-soon ********/
   .section-derniers-coming{
-    height: 2000px;
     width: 100%;
   }
   .section-derniers{
     position: relative;
-    height: 550px;
+    height: 480px;
     width: auto;
     overflow-x: hidden;
-    background-color: red;
+  }
+  .section-derniers-coming-header{
+    margin-top: 0px;
   }
   .section-derniers-items-container{
     justify-content: center;
-    
+    transition: all 0.3s ease;
   }
   .section-derniers-item{
     position: absolute;
@@ -1023,6 +1024,36 @@ footer{
   .dernier-right-arrow, .dernier-left-arrow{
     top: 300px;
   }
+
+
+  /*** Comming Soon ***/
+  .section-coming-items-container{
+    position: relative;
+    height: 350px;
+    box-shadow: none;
+  }
+  #les-derniers{
+    position: relative;
+    height: 400px;
+    overflow-x: hidden;
+    background: yellow;
+  }
+  .les-derniers-categorie{
+    position: absolute;
+    right: 25% !important;
+    left: 15% !important;
+    width: 70vw;
+    border: 1px rgba(100,100,100, 0.2) solid !important;
+    border-radius: 15px !important;
+    transform: translate(0px);
+  }
+  .les-derniers-item{
+    /* justify-content: center; */
+  }
+  .les-derniers-item-image{
+
+  }
+
 
 
 

@@ -3,8 +3,12 @@ const navLayer = document.getElementsByClassName('nav-layer')[0];
 const navList = document.getElementById('navbar-list');
 const sectionTopItems = document.getElementsByClassName('section-top-item');
 const sectionTopSlide = document.getElementById("section-top-items-slide")
-const sectionDernierSlide = document.getElementsByClassName("section-derniers-items-container")[0];
 const sectionDernierItems = document.getElementsByClassName("section-derniers-item");
+const sectionDernierSlide = document.getElementsByClassName("section-derniers-items-container")[0];
+const commingCategories = document.getElementsByClassName('les-derniers-categorie');
+const sectionCommingSlide = document.getElementsByClassName("comming-slider")[0];
+const commingSliderArrowL = document.getElementsByClassName('comming-left-arrow')[0];
+const commingSliderArrowR = document.getElementsByClassName('comming-right-arrow')[0];
 const topSliderArrowL = document.getElementsByClassName('left-arrow-slider')[0];
 const topSliderArrowR = document.getElementsByClassName('right-arrow-slider')[0];
 const dernierSliderArrowL = document.getElementsByClassName('dernier-left-arrow')[0];
@@ -52,38 +56,60 @@ if (isMobile) {
   });
 
   // slider L/R triggers
-  let slideLimit = 0;
+  let slideLimitTop = 0;
   let fullWidth = 0;
   topSliderArrowR.addEventListener('click', function(){
-    if(slideLimit == 4) return;
+    if(slideLimitTop == 4) return;
     fullWidth += sectionTopItems[0].offsetWidth + 200;
     sectionTopSlide.style = `transform: translateX(${-fullWidth}px);`;
-    slideLimit++;
+    slideLimitTop++;
   })
   topSliderArrowL.addEventListener('click', function(){
-    if(slideLimit == 0) return;
+    if(slideLimitTop == 0) return;
     fullWidth -= sectionTopItems[0].offsetWidth + 200;
     sectionTopSlide.style = `transform: translateX(${-fullWidth}px);`;
-    slideLimit--;
+    slideLimitTop--;
   })
 
   // les derniers
+  let slideLimitDernier = 0;
   let itemDerniersPos = 0;
   Array.from(sectionDernierItems).forEach(item => {
     item.style = `transform: translateX(${itemDerniersPos}px)`;
     itemDerniersPos += item.offsetWidth + 200;
   });
   dernierSliderArrowR.addEventListener('click', function(){
-    if(slideLimit == 2) return;
+    if(slideLimitDernier == 2) return;
     fullWidth += sectionDernierItems[0].offsetWidth + 200;
     sectionDernierSlide.style = `transform: translateX(${-fullWidth}px);`;
-    slideLimit++;
+    slideLimitDernier++;
   })
   dernierSliderArrowL.addEventListener('click', function(){
-    if(slideLimit == 0) return;
+    if(slideLimitDernier == 0) return;
     fullWidth -= sectionDernierItems[0].offsetWidth + 200;
     sectionDernierSlide.style = `transform: translateX(${-fullWidth}px);`;
-    slideLimit--;
+    slideLimitDernier--;
+  })
+
+  // Comming
+  let slideLimitComming = 0;
+  let categoryPos = 0;
+  Array.from(commingCategories).forEach(item => {
+    item.style = `transform: translateX(${categoryPos}px)`;
+    categoryPos += item.offsetWidth + 200;
+  });
+
+  commingSliderArrowR.addEventListener('click', function(){
+    if(slideLimitComming == 1) return;
+    fullWidth += sectionDernierItems[0].offsetWidth + 200;
+    sectionCommingSlide.style = `transform: translateX(${-fullWidth}px);`;
+    slideLimitComming++;
+  })
+  commingSliderArrowL.addEventListener('click', function(){
+    if(slideLimitComming == 0) return;
+    fullWidth -= sectionDernierItems[0].offsetWidth + 200;
+    sectionCommingSlide.style = `transform: translateX(${-fullWidth}px);`;
+    slideLimitComming--;
   })
 
   /****************@ END isMobile*****************/
