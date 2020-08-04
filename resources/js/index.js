@@ -1,20 +1,4 @@
-const mobileMenuIcon = document.getElementById('menu-btn');
-const navLayer = document.getElementsByClassName('nav-layer')[0];
-const navList = document.getElementById('navbar-list');
-const sectionTopItems = document.getElementsByClassName('section-top-item');
-const sectionTopSlide = document.getElementById("section-top-items-slide")
-const sectionDernierItems = document.getElementsByClassName("section-derniers-item");
-const sectionDernierSlide = document.getElementsByClassName("section-derniers-items-container")[0];
-const commingCategories = document.getElementsByClassName('les-derniers-categorie');
-const sectionCommingSlide = document.getElementsByClassName("comming-slider")[0];
-const sectionComparisonItems = document.getElementsByClassName("section-similaire-item");
-const commingSliderArrowL = document.getElementsByClassName('comming-left-arrow')[0];
-const commingSliderArrowR = document.getElementsByClassName('comming-right-arrow')[0];
-const topSliderArrowL = document.getElementsByClassName('left-arrow-slider')[0];
-const topSliderArrowR = document.getElementsByClassName('right-arrow-slider')[0];
-const dernierSliderArrowL = document.getElementsByClassName('dernier-left-arrow')[0];
-const dernierSliderArrowR = document.getElementsByClassName('dernier-right-arrow')[0];
-
+//Navbar Btns
 const acceuil = document.getElementsByClassName('navbar-list-item')[1];
 const lesMarques = document.getElementsByClassName('navbar-list-item')[2];
 const lesDernies = document.getElementsByClassName('navbar-list-item')[3];
@@ -23,6 +7,30 @@ const similar = document.getElementsByClassName('navbar-list-item')[5];
 const rechercheLayer = document.getElementsByClassName('search-bar-options-layer')[0];
 const rechercheFilterBtn = document.getElementById("filters-btn");
 const rechercheBox = document.getElementsByClassName('search-bar-options')[0];
+
+const mobileMenuIcon = document.getElementById('menu-btn');
+const navLayer = document.getElementsByClassName('nav-layer')[0];
+const navList = document.getElementById('navbar-list');
+//top Btns
+const sectionTopItems = document.getElementsByClassName('section-top-item');
+const sectionTopSlide = document.getElementById("section-top-items-slide")
+const topSliderArrowL = document.getElementsByClassName('left-arrow-slider')[0];
+const topSliderArrowR = document.getElementsByClassName('right-arrow-slider')[0];
+//dernier Btns
+const sectionDernierItems = document.getElementsByClassName("section-derniers-item");
+const sectionDernierSlide = document.getElementsByClassName("section-derniers-items-container")[0];
+const dernierSliderArrowL = document.getElementsByClassName('dernier-left-arrow')[0];
+const dernierSliderArrowR = document.getElementsByClassName('dernier-right-arrow')[0];
+//comming Btns
+const commingCategories = document.getElementsByClassName('les-derniers-categorie');
+const sectionCommingSlide = document.getElementsByClassName("comming-slider")[0];
+const commingSliderArrowL = document.getElementsByClassName('comming-left-arrow')[0];
+const commingSliderArrowR = document.getElementsByClassName('comming-right-arrow')[0];
+//comparaison Btns
+const sectionComparisonItems = document.getElementsByClassName("section-similaire-item");
+const sectionComparisonSlide = document.getElementsByClassName("comparison-slider")[0];
+const comparisonSliderArrowL = document.getElementsByClassName('comparison-left-arrow')[0];
+const comparisonSliderArrowR = document.getElementsByClassName('comparison-right-arrow')[0];
 
 
 
@@ -122,6 +130,18 @@ if (isMobile) {
     item.style = `transform: translateX(${comparisonPos}px)`;
     comparisonPos += item.offsetWidth + 200;
   });
+  comparisonSliderArrowR.addEventListener('click', function(){
+    if(slideLimitComparison == 4) return;
+    fullWidthComparison += sectionComparisonItems[0].offsetWidth + 200;
+    sectionComparisonSlide.style = `transform: translateX(${-fullWidthComparison}px);`;
+    slideLimitComparison++;
+  })
+  comparisonSliderArrowL.addEventListener('click', function(){
+    if(slideLimitComparison == 0) return;
+    fullWidthComparison -= sectionComparisonItems[0].offsetWidth + 200;
+    sectionComparisonSlide.style = `transform: translateX(${-fullWidthComparison}px);`;
+    slideLimitComparison--;
+  })
 
   /****************@ END isMobile*****************/
 }
