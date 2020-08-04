@@ -7,6 +7,7 @@ const sectionDernierItems = document.getElementsByClassName("section-derniers-it
 const sectionDernierSlide = document.getElementsByClassName("section-derniers-items-container")[0];
 const commingCategories = document.getElementsByClassName('les-derniers-categorie');
 const sectionCommingSlide = document.getElementsByClassName("comming-slider")[0];
+const sectionComparisonItems = document.getElementsByClassName("section-similaire-item");
 const commingSliderArrowL = document.getElementsByClassName('comming-left-arrow')[0];
 const commingSliderArrowR = document.getElementsByClassName('comming-right-arrow')[0];
 const topSliderArrowL = document.getElementsByClassName('left-arrow-slider')[0];
@@ -50,50 +51,50 @@ if (isMobile) {
   **************************/
   // top marques
   let itemPos = 0;
+  let slideLimitTop = 0;
+  let fullWidthTop = 0;
   Array.from(sectionTopItems).forEach(item => {
     item.style = `transform: translateX(${itemPos}px)`;
     itemPos += item.offsetWidth + 200;
   });
-
-  // slider L/R triggers
-  let slideLimitTop = 0;
-  let fullWidth = 0;
   topSliderArrowR.addEventListener('click', function(){
     if(slideLimitTop == 4) return;
-    fullWidth += sectionTopItems[0].offsetWidth + 200;
-    sectionTopSlide.style = `transform: translateX(${-fullWidth}px);`;
+    fullWidthTop += sectionTopItems[0].offsetWidth + 200;
+    sectionTopSlide.style = `transform: translateX(${-fullWidthTop}px);`;
     slideLimitTop++;
   })
   topSliderArrowL.addEventListener('click', function(){
     if(slideLimitTop == 0) return;
-    fullWidth -= sectionTopItems[0].offsetWidth + 200;
-    sectionTopSlide.style = `transform: translateX(${-fullWidth}px);`;
+    fullWidthTop -= sectionTopItems[0].offsetWidth + 200;
+    sectionTopSlide.style = `transform: translateX(${-fullWidthTop}px);`;
     slideLimitTop--;
   })
 
   // les derniers
   let slideLimitDernier = 0;
   let itemDerniersPos = 0;
+  let fullWidthDernier = 0;
   Array.from(sectionDernierItems).forEach(item => {
     item.style = `transform: translateX(${itemDerniersPos}px)`;
     itemDerniersPos += item.offsetWidth + 200;
   });
   dernierSliderArrowR.addEventListener('click', function(){
     if(slideLimitDernier == 2) return;
-    fullWidth += sectionDernierItems[0].offsetWidth + 200;
-    sectionDernierSlide.style = `transform: translateX(${-fullWidth}px);`;
+    fullWidthDernier += sectionDernierItems[0].offsetWidth + 200;
+    sectionDernierSlide.style = `transform: translateX(${-fullWidthDernier}px);`;
     slideLimitDernier++;
   })
   dernierSliderArrowL.addEventListener('click', function(){
     if(slideLimitDernier == 0) return;
-    fullWidth -= sectionDernierItems[0].offsetWidth + 200;
-    sectionDernierSlide.style = `transform: translateX(${-fullWidth}px);`;
+    fullWidthDernier -= sectionDernierItems[0].offsetWidth + 200;
+    sectionDernierSlide.style = `transform: translateX(${-fullWidthDernier}px);`;
     slideLimitDernier--;
   })
 
   // Comming
   let slideLimitComming = 0;
   let categoryPos = 0;
+  let fullWidthComming = 0;
   Array.from(commingCategories).forEach(item => {
     item.style = `transform: translateX(${categoryPos}px)`;
     categoryPos += item.offsetWidth + 200;
@@ -101,16 +102,26 @@ if (isMobile) {
 
   commingSliderArrowR.addEventListener('click', function(){
     if(slideLimitComming == 1) return;
-    fullWidth += sectionDernierItems[0].offsetWidth + 200;
-    sectionCommingSlide.style = `transform: translateX(${-fullWidth}px);`;
+    fullWidthComming += sectionDernierItems[0].offsetWidth + 200;
+    sectionCommingSlide.style = `transform: translateX(${-fullWidthComming}px);`;
     slideLimitComming++;
   })
   commingSliderArrowL.addEventListener('click', function(){
     if(slideLimitComming == 0) return;
-    fullWidth -= sectionDernierItems[0].offsetWidth + 200;
-    sectionCommingSlide.style = `transform: translateX(${-fullWidth}px);`;
+    fullWidthComming -= sectionDernierItems[0].offsetWidth + 200;
+    sectionCommingSlide.style = `transform: translateX(${-fullWidthComming}px);`;
     slideLimitComming--;
   })
+
+
+  // Comparison
+  let slideLimitComparison = 0;
+  let comparisonPos = 0;
+  let fullWidthComparison = 0;
+  Array.from(sectionComparisonItems).forEach(item => {
+    item.style = `transform: translateX(${comparisonPos}px)`;
+    comparisonPos += item.offsetWidth + 200;
+  });
 
   /****************@ END isMobile*****************/
 }

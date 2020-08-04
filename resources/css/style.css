@@ -446,6 +446,7 @@ button{
 }
 .comming-slider{
   display: flex;
+  transition: all 0.3s ease;
 }
 .les-derniers-categorie{
   width: 50%;
@@ -487,7 +488,10 @@ button{
 .section-comparisons .section-title{
   transform: translateX(25%);
 }
-.section-similaire-items-container{
+/* .section-similaire-items-container{
+
+} */
+.comparison-slider{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -510,7 +514,7 @@ button{
   height: 300px;
   width: 47%;
   margin: 0px 3px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .vs{
   position: absolute;
@@ -849,7 +853,7 @@ footer{
     width: 25px;
     margin: 0px auto;
     background: red;
-    transition: background .2s ease-out;
+    transition: background 0.3s ease;
   }  
    .menu-icon .navicon:before,
    .menu-icon .navicon:after {
@@ -857,7 +861,7 @@ footer{
     content: '';
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: all 0.3s ease;
     width: 100%;
   }  
    .menu-icon .navicon:before {
@@ -916,7 +920,7 @@ footer{
     width: 100vw;
     padding: 60px 0px 0px;
     transform: translateX(-100%);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
   }
   .navbar-search{
     position: relative;
@@ -985,7 +989,7 @@ footer{
   }
   #section-top-items-slide{
     justify-content: center;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
   }
   .left-arrow-slider, .right-arrow-slider{
     display: block;
@@ -998,6 +1002,7 @@ footer{
 
   /********* les-derniers comming-soon ********/
   .section-derniers-coming{
+    flex-direction: column;
     width: 100%;
   }
   .section-derniers{
@@ -1027,6 +1032,9 @@ footer{
 
 
   /*** Comming Soon ***/
+  .section-coming{
+    width: auto;
+  }
   .section-coming-items-container{
     position: relative;
     height: 350px;
@@ -1036,7 +1044,6 @@ footer{
     position: relative;
     height: 400px;
     overflow-x: hidden;
-    background: yellow;
   }
   .les-derniers-categorie{
     position: absolute;
@@ -1047,21 +1054,26 @@ footer{
     border-radius: 15px !important;
     transform: translate(0px);
   }
-  .les-derniers-item{
-    /* justify-content: center; */
+
+  /*** Comparisons ***/
+  .section-comparisons{
+    width: 100%;
   }
-  .les-derniers-item-image{
-
+  .section-similaire-items-container{
+    position: relative;
+  }
+  .comparison-slider{
+    position: relative;
+    height: 380px;
+    background-color: lawngreen;
+    transition: all 0.3s ease;
+  }
+  .section-similaire-item{
+    position: absolute;
+    width: 70vw;
   }
 
-
-
-
-
-  .section-coming{
-    top: 480px;
-    width: auto;
-  }
+  
 
 
 
@@ -1081,7 +1093,5 @@ footer{
 
 
 
-  .section-derniers-coming{
-    flex-direction: column;
-  }
+  
 }
