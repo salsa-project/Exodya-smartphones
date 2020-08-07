@@ -109,7 +109,7 @@
 }
 .navbar-list-logo-item{
   padding: 4px 50px 0px 7px;
-  margin: 0px auto 0px 0px;
+  margin: 0px auto;
 }
 .navbar-list-logo-item>img{
   width: 200px;
@@ -221,7 +221,7 @@
   margin: 50px auto 30px;
 }
 .section-title{
-  margin: 5px auto;
+  margin: 0px auto;
   font-weight: 900;
 }
 .section-title>span{
@@ -280,7 +280,7 @@ button{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 0px auto 30px;
+  margin: 0px auto;
 }
 .left-arrow-slider, .right-arrow-slider{
   display: none;
@@ -415,11 +415,7 @@ button{
 .section-derniers-item-title+img{
   height: 82%;
   margin: 10px auto;
-  transition: all 0.3s ease;
   cursor: pointer;
-}
-.section-derniers-item-title+img:hover{
-  transform: translateY(-60px) rotate(15deg);
 }
 .section-derniers-item-btn-container{
   position: absolute;
@@ -715,7 +711,7 @@ footer{
   flex-direction: row-reverse;
   justify-content: center;
   width: 85%;
-  margin: 0px auto 0px;
+  margin: 0px auto;
 }
 .footer-div1{
   display: flex;
@@ -747,17 +743,17 @@ footer{
 }
 #div-title-find{
   padding: 10px 0px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   text-align: center;
 }
-.footer-div1-find>div>li{
-  padding: 15px;
+.footer-div1-find>div>a{
   margin: 0px 8px;
-  background: white;
-  border-radius: 50%;
 }
-.footer-div1-find>div>li:hover{
-  transform: scale(1.15);
+.footer-div1-find>div>a>img{
+  width: 40px;
+}
+.footer-div1-find>div>a:hover{
+  transform: scale(1.25);
   cursor: pointer;
 }
 .footer-div2{
@@ -946,6 +942,7 @@ footer{
   }
   .navbar-list-logo-item{
     padding: 0px;
+    margin-bottom: 30px;
   }
   .search-bar-options{
     width: 95%;
@@ -1052,6 +1049,7 @@ footer{
     width: 70vw;
     border: 1px rgba(100,100,100, 0.2) solid !important;
     border-radius: 15px !important;
+    box-shadow: 0px 0px 6px -3px grey;
     transform: translate(0px);
   }
 
@@ -1087,21 +1085,36 @@ footer{
     margin: 0px;
   }
   .footer-divs{
-    width: 100%;
     flex-direction: column-reverse;
+    width: 100%;
+    margin: 20px 0px;
   }
   .footer-div1, .footer-div2{
-    width: 100%;
-  }
-  .footer-div2{
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     text-align: center;
+  }
+  .footer-div2{
     margin: 0px 0px 20px;
   }
   #footer-logo{
     width: 180px;
     margin: 0px 0px 10px; 
+  }
+  .footer-div1-infos, .footer-div1-extras, .footer-div1-find{
+    width: 50%;
+    margin: 20px 0px;
+  }
+  #div-title-information, #div-title-extras, #div-title-find{
+    padding: 5px;
+    color: white;
+    background: rgba(255,0,0,0.8);
+    border-radius: 5px;
+  }
+  #div-title-find{
+    margin-bottom: 10px;
   }
     
 
