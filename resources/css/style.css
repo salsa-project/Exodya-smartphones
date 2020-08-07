@@ -1083,19 +1083,27 @@ footer{
   /*** Footer ***/
   footer{
     height: auto;
-    margin: 50px 0px 0px;
+    padding: 20px 0px;
+    margin: 0px;
   }
-.footer-divs{
-  width: 100%;
-  flex-direction: column;
-}
-.footer-div1, .footer-div2{
-  width: 100%;
-}
-.footer-div2{
-  margin-bottom: 80px;
-}
-  
+  .footer-divs{
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .footer-div1, .footer-div2{
+    width: 100%;
+  }
+  .footer-div2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 0px 20px;
+  }
+  #footer-logo{
+    width: 180px;
+    margin: 0px 0px 10px; 
+  }
+    
 
 
 
