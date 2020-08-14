@@ -33,7 +33,6 @@ const comparisonSliderArrowL = document.getElementsByClassName('comparison-left-
 const comparisonSliderArrowR = document.getElementsByClassName('comparison-right-arrow')[0];
 
 
-
 // display/hide recherche avancé
 rechercheFilterBtn.addEventListener('click', function(){
   rechercheLayer.classList.toggle('search-bar-options-layer-visible');
@@ -52,7 +51,6 @@ if (isMobile) {
   // toggle mobile menu
   mobileMenuIcon.addEventListener('click', function(){
     navLayer.classList.toggle('nav-layer-hide');
-    (navLayer.classList[1] !== 'nav-layer-hide') ? navList.style.transform = 'translateX(0%)' : navList.style.transform = 'translateX(-100%)';
   })
   /**************************
         slider mobile
@@ -66,13 +64,14 @@ if (isMobile) {
     itemPos += item.offsetWidth + 200;
   });
   topSliderArrowR.addEventListener('click', function(){
-    if(slideLimitTop == 4) return;
+    (slideLimitTop == 4) ? topSliderArrowR.style.display="none" : topSliderArrowR.style.display="block" ;
+    if(slideLimitTop == 4){ return;}
     fullWidthTop += sectionTopItems[0].offsetWidth + 200;
     sectionTopSlide.style = `transform: translateX(${-fullWidthTop}px);`;
     slideLimitTop++;
   })
   topSliderArrowL.addEventListener('click', function(){
-    if(slideLimitTop == 0) return;
+    if(slideLimitTop == 0) {topSliderArrowL.style.display="none";return};
     fullWidthTop -= sectionTopItems[0].offsetWidth + 200;
     sectionTopSlide.style = `transform: translateX(${-fullWidthTop}px);`;
     slideLimitTop--;
@@ -143,6 +142,12 @@ if (isMobile) {
     slideLimitComparison--;
   })
 
+  //This will fix the hidden SEARCH-BOX when the  keyboard POP-up ..
+  const itemCenter = document.getElementsByClassName('item-center')[0];
+  window.addEventListener('resize', function(e){
+    (navList.offsetHeight < 540)? itemCenter.classList.add('item-center-row') : itemCenter.classList.remove('item-center-row')
+  });
+
   /****************@ END isMobile*****************/
 }
 
@@ -183,4 +188,8 @@ switch(window.location.pathname){
   case "/derniers.html":
   lesDernies.classList.add('navbar-item-active');
   break;
+}
+
+function detectLimit(counter, btn){
+  
 }
