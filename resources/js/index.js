@@ -7,6 +7,8 @@ const similar = document.getElementsByClassName('navbar-list-item')[5];
 const rechercheLayer = document.getElementsByClassName('search-bar-options-layer')[0];
 const rechercheFilterBtn = document.getElementById("filters-btn");
 const rechercheBox = document.getElementsByClassName('search-bar-options')[0];
+const rechercheBoxClose = document.getElementsByClassName('search-bar-options-close')[0];
+
 
 const mobileMenuIcon = document.getElementById('menu-btn');
 const navLayer = document.getElementsByClassName('nav-layer')[0];
@@ -38,7 +40,7 @@ rechercheFilterBtn.addEventListener('click', function(){
   rechercheLayer.classList.toggle('search-bar-options-layer-visible');
 })
 window.addEventListener('click', function(e){
-  if(rechercheLayer.contains(e.target) && !rechercheBox.contains(e.target)){
+  if(rechercheLayer.contains(e.target) && !rechercheBox.contains(e.target) || rechercheBoxClose.contains(e.target)){
     rechercheLayer.classList.toggle('search-bar-options-layer-visible')
   }
 })
