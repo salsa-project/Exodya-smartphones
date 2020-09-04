@@ -63,7 +63,7 @@
 }
 #showcase-logo{
   height: 70px;
-  margin: 30px auto 30px;
+  margin: 15px auto;
 }
 
 /***********************************
@@ -78,7 +78,7 @@
 }
 #navbar-list{
   position: relative;
-  height: 60px;
+  height: 50px;
   display: flex;
   padding: 0px 20px;
   background: #232323;
@@ -88,17 +88,17 @@
   top: 0px;
   box-shadow: 0px 0px 8px -1px black;
 }
-.navbar-list-item{
-  padding: 22px 5px;
-  margin: 0px 10px 0px;
-  font-size: 11pt;
-  cursor: pointer;
-}
 .item-center{
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0px auto;
   width: 48%;
+}
+.navbar-list-item{
+  margin: 0px 10px 0px;
+  font-size: 11pt;
+  cursor: pointer;
 }
 .navbar-list-item>a{
   color: white;
@@ -108,11 +108,11 @@
   color: #ED2010;
 }
 .navbar-list-logo-item{
-  padding: 4px 50px 0px 7px;
+  padding: 0px 50px 0px 5px;
   margin: 0px auto;
 }
 .navbar-list-logo-item>img{
-  width: 200px;
+  width: 180px;
 }
 .navbar-item-active>a{
   color: #ED2010;
@@ -120,7 +120,7 @@
 .navbar-search{
   display: flex;
   width: 23%;
-  padding: 13px 0px;
+  padding: 8px 0px;
 }
 .navbar-search>input{
   width: 85%;
