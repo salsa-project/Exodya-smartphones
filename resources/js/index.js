@@ -24,10 +24,10 @@ const sectionDernierSlide = document.getElementsByClassName("section-derniers-it
 const dernierSliderArrowL = document.getElementsByClassName('dernier-left-arrow')[0];
 const dernierSliderArrowR = document.getElementsByClassName('dernier-right-arrow')[0];
 //comming Btns
-const commingCategories = document.getElementsByClassName('les-derniers-categorie');
-const sectionCommingSlide = document.getElementsByClassName("comming-slider")[0];
-const commingSliderArrowL = document.getElementsByClassName('comming-left-arrow')[0];
-const commingSliderArrowR = document.getElementsByClassName('comming-right-arrow')[0];
+// const commingCategories = document.getElementsByClassName('les-derniers-categorie');
+// const sectionCommingSlide = document.getElementsByClassName("comming-slider")[0];
+// const commingSliderArrowL = document.getElementsByClassName('comming-left-arrow')[0];
+// const commingSliderArrowR = document.getElementsByClassName('comming-right-arrow')[0];
 //comparaison Btns
 const sectionComparisonItems = document.getElementsByClassName("section-similaire-item");
 const sectionComparisonSlide = document.getElementsByClassName("comparison-slider")[0];
@@ -66,17 +66,20 @@ if (isMobile) {
     itemPos += item.offsetWidth + 200;
   });
   topSliderArrowR.addEventListener('click', function(){
-    (slideLimitTop == 4) ? topSliderArrowR.style.display="none" : topSliderArrowR.style.display="block" ;
-    if(slideLimitTop == 4){ return;}
+    if(slideLimitTop == sectionTopItems.length -1){ return;}
     fullWidthTop += sectionTopItems[0].offsetWidth + 200;
     sectionTopSlide.style = `transform: translateX(${-fullWidthTop}px);`;
     slideLimitTop++;
+    (slideLimitTop == sectionTopItems.length -1) && topSliderArrowR.classList.toggle('arrow-slider-off');
+    (slideLimitTop !== 0) && topSliderArrowL.classList.remove('arrow-slider-off');
   })
   topSliderArrowL.addEventListener('click', function(){
-    if(slideLimitTop == 0) {topSliderArrowL.style.display="none";return};
+    if(slideLimitTop == 0){ return;}
     fullWidthTop -= sectionTopItems[0].offsetWidth + 200;
     sectionTopSlide.style = `transform: translateX(${-fullWidthTop}px);`;
     slideLimitTop--;
+    (slideLimitTop == 0) && topSliderArrowL.classList.toggle('arrow-slider-off');
+    (slideLimitTop !== sectionTopItems.length -1) && topSliderArrowR.classList.remove('arrow-slider-off');
   })
 
   // les derniers
@@ -88,39 +91,43 @@ if (isMobile) {
     itemDerniersPos += item.offsetWidth + 200;
   });
   dernierSliderArrowR.addEventListener('click', function(){
-    if(slideLimitDernier == 2) return;
+    if(slideLimitDernier == sectionDernierItems.length -1) return;
     fullWidthDernier += sectionDernierItems[0].offsetWidth + 200;
     sectionDernierSlide.style = `transform: translateX(${-fullWidthDernier}px);`;
     slideLimitDernier++;
+    (slideLimitDernier == sectionDernierItems.length -1) && dernierSliderArrowR.classList.toggle('arrow-slider-off');
+    (slideLimitDernier !== 0) && dernierSliderArrowL.classList.remove('arrow-slider-off');    
   })
   dernierSliderArrowL.addEventListener('click', function(){
     if(slideLimitDernier == 0) return;
     fullWidthDernier -= sectionDernierItems[0].offsetWidth + 200;
     sectionDernierSlide.style = `transform: translateX(${-fullWidthDernier}px);`;
     slideLimitDernier--;
+    (slideLimitDernier == 0) && dernierSliderArrowL.classList.toggle('arrow-slider-off');    
+    (slideLimitDernier !== sectionDernierItems.length -1) && dernierSliderArrowR.classList.remove('arrow-slider-off');
   })
 
   // Comming
-  let slideLimitComming = 0;
-  let categoryPos = 0;
-  let fullWidthComming = 0;
-  Array.from(commingCategories).forEach(item => {
-    item.style = `transform: translateX(${categoryPos}px)`;
-    categoryPos += item.offsetWidth + 200;
-  });
+  // let slideLimitComming = 0;
+  // let categoryPos = 0;
+  // let fullWidthComming = 0;
+  // Array.from(commingCategories).forEach(item => {
+  //   item.style = `transform: translateX(${categoryPos}px)`;
+  //   categoryPos += item.offsetWidth + 200;
+  // });
 
-  commingSliderArrowR.addEventListener('click', function(){
-    if(slideLimitComming == 1) return;
-    fullWidthComming += sectionDernierItems[0].offsetWidth + 200;
-    sectionCommingSlide.style = `transform: translateX(${-fullWidthComming}px);`;
-    slideLimitComming++;
-  })
-  commingSliderArrowL.addEventListener('click', function(){
-    if(slideLimitComming == 0) return;
-    fullWidthComming -= sectionDernierItems[0].offsetWidth + 200;
-    sectionCommingSlide.style = `transform: translateX(${-fullWidthComming}px);`;
-    slideLimitComming--;
-  })
+  // commingSliderArrowR.addEventListener('click', function(){
+  //   if(slideLimitComming == 1) return;
+  //   fullWidthComming += sectionDernierItems[0].offsetWidth + 200;
+  //   sectionCommingSlide.style = `transform: translateX(${-fullWidthComming}px);`;
+  //   slideLimitComming++;
+  // })
+  // commingSliderArrowL.addEventListener('click', function(){
+  //   if(slideLimitComming == 0) return;
+  //   fullWidthComming -= sectionDernierItems[0].offsetWidth + 200;
+  //   sectionCommingSlide.style = `transform: translateX(${-fullWidthComming}px);`;
+  //   slideLimitComming--;
+  // })
 
 
   // Comparison
@@ -132,16 +139,20 @@ if (isMobile) {
     comparisonPos += item.offsetWidth + 200;
   });
   comparisonSliderArrowR.addEventListener('click', function(){
-    if(slideLimitComparison == 4) return;
+    if(slideLimitComparison == sectionComparisonItems.length -1) return;
     fullWidthComparison += sectionComparisonItems[0].offsetWidth + 200;
     sectionComparisonSlide.style = `transform: translateX(${-fullWidthComparison}px);`;
     slideLimitComparison++;
+    (slideLimitComparison == sectionComparisonItems.length -1) && comparisonSliderArrowR.classList.toggle('arrow-slider-off');
+    (slideLimitComparison !== 0) && comparisonSliderArrowL.classList.remove('arrow-slider-off');    
   })
   comparisonSliderArrowL.addEventListener('click', function(){
     if(slideLimitComparison == 0) return;
     fullWidthComparison -= sectionComparisonItems[0].offsetWidth + 200;
     sectionComparisonSlide.style = `transform: translateX(${-fullWidthComparison}px);`;
     slideLimitComparison--;
+    (slideLimitComparison == 0) && comparisonSliderArrowL.classList.toggle('arrow-slider-off');    
+    (slideLimitComparison !== sectionComparisonItems.length -1) && comparisonSliderArrowR.classList.remove('arrow-slider-off');
   })
 
   //This will fix the hidden SEARCH-BOX when the  keyboard POP-up ..
