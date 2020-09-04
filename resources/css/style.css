@@ -63,7 +63,7 @@
 }
 #showcase-logo{
   height: 70px;
-  margin: -20px auto 30px;
+  margin: 30px auto 30px;
 }
 
 /***********************************
@@ -381,19 +381,20 @@ button{
   margin: 0px;
 }
 .section-derniers{
-  width: 55%;
+  width: 100%;
+  margin: 0px auto;
 }
 .section-derniers-items-container{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .section-derniers-item{
   position: relative;
   display: flex;
   flex-direction: column;
   height: 350px;
-  width: 32%;
+  width: 18%;
   border: 1px rgba(100,100,100, 0.2) solid;
   border-radius: 15px;
   box-shadow: 0px 0px 6px -3px gray;
