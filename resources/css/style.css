@@ -82,6 +82,23 @@
 #nav-mobile{
   display: none;
 }
+.nav-mobile-logo{
+  height: 40px;
+}
+.nav-mobile-register{
+  padding: 10px;
+  margin-right: 10px;
+  color: red;
+  background: transparent;
+  border: 1px red solid;
+  border-radius: 5px;  
+}
+.nav-mobile-register:active{
+  color: red;
+  background: white !important;
+  border: 1px rgba(100,100,100,0.5) solid; 
+  box-shadow: inset 2px 2px 5px gray;
+}
 #navbar{
   width: 100%;
   z-index: 5;
@@ -728,7 +745,6 @@ button{
 .fab:hover{
   transform: scale(1.1);
 }
-
 
 /***********************************
                FOOTER

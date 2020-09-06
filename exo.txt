@@ -1,11 +1,14 @@
 Responsive:
-1/ logo
-2/ signup
-3/ [DONE] z-index (fab)
-4/ explorer --> +
-5/ [Done] footer les titles kima desktop
-6/ slider dot's ...
-7/ vs fog l(fab)
-
-
-
+01/ logo
+02/ signup
+03/ [DONE] z-index (fab)
+04/ explorer --> +
+05/ [Done] footer les titles kima desktop
+06/ slider dot's ...
+07/ vs fog l(fab)
+08/ nbedel lizimage ta3 li dernier
+09/ navbar sous-menu
+10/ version tablet responsive
+11/ fix menu checkbox history
+12/ menu:open --> body:overflow = hidden
+13/ footer information & extra --> row m3a ba3dahom
