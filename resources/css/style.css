@@ -1164,22 +1164,24 @@ footer{
     margin: 20px 0px;
   }
   .footer-div1, .footer-div2{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     text-align: center;
   }
+  .footer-div1{
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
   .footer-div2{
+    align-items: center;
     margin: 0px 0px 20px;
   }
   #footer-logo{
     width: 180px;
     margin: 0px 0px 10px; 
   }
-  .footer-div1-infos, .footer-div1-extras, .footer-div1-find{
-    width: 50%;
-    margin: 20px 0px;
+  .footer-div1-infos, .footer-div1-extra, .footer-div1-find{
+    width: 48%;
+    margin: 10px 0px;
   }
   #div-title-information, #div-title-extras, #div-title-find{
     padding: 5px;
