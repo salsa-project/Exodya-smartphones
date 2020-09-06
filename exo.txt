@@ -1,0 +1,11 @@
+Responsive:
+1/ logo
+2/ signup
+3/ [DONE] z-index (fab)
+4/ explorer --> +
+5/ [Done] footer les titles kima desktop
+6/ slider dot's ...
+7/ vs fog l(fab)
+
+
+
