@@ -20,7 +20,7 @@ const topSliderArrowL = document.getElementsByClassName('left-arrow-slider')[0];
 const topSliderArrowR = document.getElementsByClassName('right-arrow-slider')[0];
 //dernier Btns
 const sectionDernierItems = document.getElementsByClassName("section-derniers-item");
-const sectionDernierSlide = document.getElementsByClassName("section-derniers-items-container")[0];
+const sectionDernierSlide = document.getElementsByClassName("dernier-slider")[0];
 const dernierSliderArrowL = document.getElementsByClassName('dernier-left-arrow')[0];
 const dernierSliderArrowR = document.getElementsByClassName('dernier-right-arrow')[0];
 //comming Btns
@@ -89,7 +89,7 @@ if (isMobile) {
   Array.from(sectionDernierItems).forEach(item => {
     item.style = `transform: translateX(${itemDerniersPos}px)`;
     itemDerniersPos += item.offsetWidth + 200;
-  });
+  })
   dernierSliderArrowR.addEventListener('click', function(){
     if(slideLimitDernier == sectionDernierItems.length -1) return;
     fullWidthDernier += sectionDernierItems[0].offsetWidth + 200;
@@ -206,3 +206,10 @@ switch(window.location.pathname){
 function detectLimit(counter, btn){
   
 }
+
+// const dotsContainer = document.getElementsByClassName('dots-container')[0];
+// for(var i = 0; i < sectionTopItems.length; ++i){
+//   const dot = document.createElement('div');
+//   dot.className = 'dot';
+//   dotsContainer.appendChild(dot);
+// }

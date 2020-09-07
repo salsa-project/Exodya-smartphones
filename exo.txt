@@ -11,5 +11,5 @@ Responsive:
 10/ [    ] version tablet responsive
 11/ [    ] fix menu checkbox history
 12/ [    ] menu:open --> body:overflow = hidden
-13/ [    ] footer information & extra --> row m3a ba3dahom
+13/ [Done] footer information & extra --> row m3a ba3dahom
 14/ [    ] nav-menu logo-x-recheche, recherche-x-acceuil, acceuil-x-ta7t chwi, register-x-logo

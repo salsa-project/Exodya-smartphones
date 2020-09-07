@@ -429,7 +429,8 @@ button{
   width: 100%;
   margin: 0px auto;
 }
-.section-derniers-items-container{
+/* .section-derniers-items-container { } */
+.dernier-slider{
   display: flex;
   justify-content: space-between;
 }
@@ -520,6 +521,8 @@ button{
                  VS
 ***********************************/
 .section-comparisons{
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: 0px auto;
 }
@@ -1023,6 +1026,21 @@ footer{
     margin: 10px 0px 0px;
   }
 
+  /** DOT **/
+  .dots-container{
+    margin: 0px auto;
+    display: flex;
+  }
+  .dot{
+    padding: 3px;
+    margin: 5px 3px;
+    background: lightgray;
+    border-radius: 50%;
+  }
+  .active-dot{
+    background: red;
+    transform: scale(1.6);
+  }
 
   /****** section-top *******/
   .section-top{
@@ -1075,7 +1093,7 @@ footer{
   .section-derniers-coming-header{
     margin-top: 0px;
   }
-  .section-derniers-items-container{
+  .dernier-slider{
     justify-content: center;
     transition: all 0.3s ease;
   }
@@ -1130,8 +1148,7 @@ footer{
   }
   .comparison-slider{
     position: relative;
-    right: 25%;
-    left: 15%;
+    justify-content: center;
     height: 380px;
     transition: all 0.3s ease;
   }
