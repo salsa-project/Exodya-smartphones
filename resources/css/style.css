@@ -87,12 +87,8 @@
   margin: 0px auto;
 }
 .nav-mobile-register{
-  padding: 10px;
-  margin-right: 10px;
+  padding: 10px 0px 20px;
   color: red;
-  background: transparent;
-  border: 1px red solid;
-  border-radius: 5px;  
 }
 .nav-mobile-register:active{
   color: red;
@@ -984,14 +980,13 @@ footer{
     /* padding: 62px 0px 0px; */
   }
   .navbar-search{
-    width: 90%;
-    padding: 30px 0px 30px;
-    /* border-top: 0.5px rgba(255,255,255,0.1) solid; */
+    width: 100%;
+    padding: 10px;
   }
   .item-center{
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-around;
+    height: 90%;
     width: 100%;
   }
   .item-center-row{
@@ -1009,8 +1004,7 @@ footer{
     text-align: center;
   }
   .navbar-list-logo-item{
-    padding: 20px 0px 0px;
-    margin-bottom: 20px;
+    padding: 10px 0px;
     border-top: 0.5px rgba(255,255,255,0.1) solid;
   }
   .search-bar-options{
