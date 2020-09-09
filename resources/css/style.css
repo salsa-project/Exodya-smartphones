@@ -969,7 +969,7 @@ footer{
   }
   .menu-logo{
     width: 50%;
-    margin: 50px 0px 20px;
+    margin: 50px 0px 0px;
   }
   #navbar-list{
     flex-direction: column-reverse;
@@ -977,7 +977,6 @@ footer{
     align-items: center;
     height: 100%;
     width: 100vw;
-    /* padding: 62px 0px 0px; */
   }
   .navbar-search{
     width: 100%;
