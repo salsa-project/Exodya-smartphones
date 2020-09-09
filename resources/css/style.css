@@ -986,7 +986,7 @@ footer{
   .item-center{
     flex-direction: column;
     justify-content: space-around;
-    height: 90%;
+    height: 45%;
     width: 100%;
   }
   .item-center-row{
