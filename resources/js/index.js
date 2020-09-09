@@ -34,6 +34,8 @@ const sectionComparisonSlide = document.getElementsByClassName("comparison-slide
 const comparisonSliderArrowL = document.getElementsByClassName('comparison-left-arrow')[0];
 const comparisonSliderArrowR = document.getElementsByClassName('comparison-right-arrow')[0];
 
+const dotsContainer = document.getElementsByClassName('dots-container');
+
 
 // display/hide recherche avancé
 rechercheFilterBtn.addEventListener('click', function(){
@@ -72,6 +74,8 @@ if (isMobile) {
     slideLimitTop++;
     (slideLimitTop == sectionTopItems.length -1) && topSliderArrowR.classList.toggle('arrow-slider-off');
     (slideLimitTop !== 0) && topSliderArrowL.classList.remove('arrow-slider-off');
+    dotsContainer[0].children[slideLimitTop-1].classList.toggle('dot-active')
+    dotsContainer[0].children[slideLimitTop].classList.toggle('dot-active')
   })
   topSliderArrowL.addEventListener('click', function(){
     if(slideLimitTop == 0){ return;}
@@ -80,6 +84,8 @@ if (isMobile) {
     slideLimitTop--;
     (slideLimitTop == 0) && topSliderArrowL.classList.toggle('arrow-slider-off');
     (slideLimitTop !== sectionTopItems.length -1) && topSliderArrowR.classList.remove('arrow-slider-off');
+    dotsContainer[0].children[slideLimitTop+1].classList.toggle('dot-active')
+    dotsContainer[0].children[slideLimitTop].classList.toggle('dot-active')
   })
 
   // les derniers
@@ -97,6 +103,8 @@ if (isMobile) {
     slideLimitDernier++;
     (slideLimitDernier == sectionDernierItems.length -1) && dernierSliderArrowR.classList.toggle('arrow-slider-off');
     (slideLimitDernier !== 0) && dernierSliderArrowL.classList.remove('arrow-slider-off');    
+    dotsContainer[1].children[slideLimitDernier-1].classList.toggle('dot-active')
+    dotsContainer[1].children[slideLimitDernier].classList.toggle('dot-active')
   })
   dernierSliderArrowL.addEventListener('click', function(){
     if(slideLimitDernier == 0) return;
@@ -105,6 +113,8 @@ if (isMobile) {
     slideLimitDernier--;
     (slideLimitDernier == 0) && dernierSliderArrowL.classList.toggle('arrow-slider-off');    
     (slideLimitDernier !== sectionDernierItems.length -1) && dernierSliderArrowR.classList.remove('arrow-slider-off');
+    dotsContainer[1].children[slideLimitDernier].classList.toggle('dot-active')
+    dotsContainer[1].children[slideLimitDernier+1].classList.toggle('dot-active')
   })
 
   // Comming
@@ -145,6 +155,8 @@ if (isMobile) {
     slideLimitComparison++;
     (slideLimitComparison == sectionComparisonItems.length -1) && comparisonSliderArrowR.classList.toggle('arrow-slider-off');
     (slideLimitComparison !== 0) && comparisonSliderArrowL.classList.remove('arrow-slider-off');    
+    dotsContainer[2].children[slideLimitComparison].classList.toggle('dot-active')
+    dotsContainer[2].children[slideLimitComparison-1].classList.toggle('dot-active')
   })
   comparisonSliderArrowL.addEventListener('click', function(){
     if(slideLimitComparison == 0) return;
@@ -153,6 +165,8 @@ if (isMobile) {
     slideLimitComparison--;
     (slideLimitComparison == 0) && comparisonSliderArrowL.classList.toggle('arrow-slider-off');    
     (slideLimitComparison !== sectionComparisonItems.length -1) && comparisonSliderArrowR.classList.remove('arrow-slider-off');
+    dotsContainer[2].children[slideLimitComparison].classList.toggle('dot-active')
+    dotsContainer[2].children[slideLimitComparison+1].classList.toggle('dot-active')
   })
 
   //This will fix the hidden SEARCH-BOX when the  keyboard POP-up ..
@@ -207,9 +221,4 @@ function detectLimit(counter, btn){
   
 }
 
-// const dotsContainer = document.getElementsByClassName('dots-container')[0];
-// for(var i = 0; i < sectionTopItems.length; ++i){
-//   const dot = document.createElement('div');
-//   dot.className = 'dot';
-//   dotsContainer.appendChild(dot);
-// }
+

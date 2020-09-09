@@ -1037,7 +1037,7 @@ footer{
     background: lightgray;
     border-radius: 50%;
   }
-  .active-dot{
+  .dot-active{
     background: red;
     transform: scale(1.6);
   }
