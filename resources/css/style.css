@@ -19,6 +19,7 @@
   font-family: sans-serif;
   font-weight: 600;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 *:focus{
   outline-width: 0px;
@@ -79,7 +80,7 @@
 /***********************************
               NAVBAR
 ***********************************/
-#nav-mobile{
+#nav-mobile, .checkbox-menu, .menu-logo, .nav-mobile-register{
   display: none;
 }
 .nav-mobile-logo{
@@ -162,15 +163,12 @@
 .navbar-search>input:focus{
   border-color: #ED2010;
   box-shadow: 0px 0px 5px -1px red;
-  z-index: 10;  
 }
 #search-btn:hover, #filters-btn:hover{
   border-color: red;
-  z-index: 15;
 }
 #search-btn:active, #filters-btn:active{
   background: red;
-  z-index: 15;
 }
 .navbar-search>button{
   width: 50px;
@@ -878,7 +876,9 @@ footer{
 * * *{background: rgba(0,0,255, 0.1);} */
 
 @media(max-width: 600px){
-
+  .body-no-scroll{
+    overflow-y: hidden !important;
+  }
   /*********head**********/
   #head, #showcase{
     display: none;
@@ -901,12 +901,15 @@ footer{
   }
 
   /* menu icon */
+  .checkbox-menu, .menu-logo, .nav-mobile-register{
+    display: block;
+  }
   .checkbox-menu{
     position: fixed;
     top: 30px;
     left: 15px;
     z-index: 45;
-  }
+  }  
   .menu-icon .navicon:active{
     transform: scale(1) rotate(180deg);
     transition: all 0.3s ease;
@@ -990,6 +993,8 @@ footer{
   }
   .item-center-row{
     display: none;
+    /* visibility: hidden; */
+    /* height: 30px; */
   }
   .item-center-row>li{
     font-size: 10pt !important;
@@ -1081,7 +1086,7 @@ footer{
   }
   .section-derniers{
     position: relative;
-    height: 480px;
+    height: 470px;
     /* width: auto; */
     overflow-x: hidden;
   }
@@ -1144,7 +1149,7 @@ footer{
   .comparison-slider{
     position: relative;
     justify-content: center;
-    height: 370px;
+    height: 355px;
     transition: all 0.3s ease;
   }
   .section-similaire-item{

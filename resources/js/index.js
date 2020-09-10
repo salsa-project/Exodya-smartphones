@@ -55,6 +55,7 @@ if (isMobile) {
   // toggle mobile menu
   mobileMenuIcon.addEventListener('click', function(){
     navLayer.classList.toggle('nav-layer-hide');
+    document.body.classList.toggle('body-no-scroll');
   })
   /**************************
         slider mobile
@@ -175,6 +176,12 @@ if (isMobile) {
     (navList.offsetHeight < 540)? itemCenter.classList.add('item-center-row') : itemCenter.classList.remove('item-center-row')
   });
 
+  //This will fix the checkbox history problem
+  setTimeout(()=>{
+    document.getElementsByClassName('menu-btn')[0].checked = false;
+  }, 0)
+
+
   /****************@ END isMobile*****************/
 }
 
@@ -188,18 +195,6 @@ if (isMobile) {
 //       navbar.classList.remove('navbar-list-fixed');
 //     }
 // });
-
-// hide mobile menu when layer clicked
-// window.addEventListener('click', function(e){
-//   if(navLayer.contains(e.target) && !navList.contains(e.target) ){
-    
-//       navList.style.transform = 'translateX(-100%)';
-//     setTimeout(function(){
-//       navLayer.classList.toggle('nav-layer-hide');
-//       mobileMenuIcon.checked = false;
-//     }, 200)
-//   }
-// })
 
 
 

@@ -1,16 +1,23 @@
 Responsive:
+----------
 01/ [Done] logo
 02/ [Done] signup
 03/ [DONE] z-index (fab)
-04/ [    ] explorer --> +
+04/ [xxxx] explorer --> +
 05/ [Done] footer les titles kima desktop
-06/ [    ] slider dot's ...
+06/ [Done] slider dot's ...
 07/ [    ] vs fog l(fab)
-08/ [    ] nbedel lizimage ta3 li dernier
+08/ [xxxx] nbedel lizimage ta3 li dernier
 09/ [    ] navbar sous-menu
 10/ [    ] version tablet responsive
-11/ [    ] fix menu checkbox history
-12/ [    ] menu:open --> body:overflow = hidden
+11/ [Done] fix menu checkbox history
+12/ [Done] menu:open --> body:overflow = hidden
 13/ [Done] footer information & extra --> row m3a ba3dahom
-14/ [    ] nav-menu logo-x-recheche, recherche-x-acceuil, acceuil-x-ta7t chwi, register-x-logo
-15/ [    ] (search-option) rigli lbutton li yokhrej fogha
+14/ [Done] nav-menu logo-x-recheche, recherche-x-acceuil, acceuil-x-ta7t chwi, register-x-logo
+15/ [Done] (search-option) rigli lbutton li yokhrej fogha
+16/ [Done] lispace li bine (dots) w bine (sections)
+17/ [Done] fixing effected desktop ui by the mobile
+
+
+desktop:
+-------
