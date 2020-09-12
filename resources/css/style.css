@@ -585,41 +585,38 @@ button{
   width: 70%;
 }
 
-/* TOP MARQUES SMARTPHONES */
+  /******** Pages HTML *********/
 /***********************************
          top marques page
 ***********************************/
-.top-marques-container{
+#page-marques>#sections-top-marques{
+  width: 90%;
+  margin: 0px auto;
+}
+#page-marques>#sections-top-marques>.top-marques-container{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-#sections-top-marques .section-top-item{
-  margin-bottom: 40px;
+#page-marques>#sections-top-marques>.top-marques-container>.section-top-item{
+  width: 20%;
+  margin: 20px;
 }
 /***********************************
         les derniers page
 ***********************************/
-#sections-les-derniers .section-derniers-items-container{
-  justify-content: space-around;
+#pages-derniers>#sections-les-derniers{
+  width: 90%;
+  margin: 0px auto;
 }
-#sections-les-derniers .section-derniers-item{
-  width: 22%;
-  margin-bottom: 40px;
-}
-/***********************************
-            Les Similaires
-***********************************/
-#sections-similaires .section-similaire-item{
-  width: 22%;
-  margin-bottom: 40px;
-}
-#sections-similaires .phone-vs-phone{
+#pages-derniers>#sections-les-derniers>.section-derniers-items-container{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-#sections-similaires .vs{
-  transform: translateX(-50%);
+#pages-derniers>#sections-les-derniers>.section-derniers-items-container>.section-derniers-item{
+  width: 20%;
+  margin: 20px;
 }
 
 /***********************************
@@ -697,22 +694,21 @@ button{
 ***********************************/
 .pagination-contanier{
   display: flex;
-  justify-content: center;
-  width: 360px;
-  margin: 30px auto;
-  box-shadow: 0px 1px 4px -1px lightgray;
+  justify-content: space-between;
+  width: 20%;
+  margin: 100px auto 30px;
+  /* box-shadow: 0px 1px 4px -1px lightgray; */
 }
 .pagination-item{
-  width: 60px;
-  padding: 15px 0px;
+  padding: 20px 40px;
   background: white;
   border: 1px rgba(70,70,70,0.1) solid;
   text-align: center;
   cursor: pointer;
 }
-.pagination-item:hover:not(:first-child):not(:last-child){
+.pagination-item:hover{
   color: red;
-  background: rgba(200,200,200,1);
+  filter: invert(0.8);
 }
 .pagination-left-arrow, .pagination-right-arrow{
   background-image: url('/resources/images/icons/left-arrow.png');
@@ -723,11 +719,7 @@ button{
 .pagination-right-arrow{
   background-image: url('/resources/images/icons/right-arrow.png');
 }
-.active-page{
-  color: white !important;
-  background: red !important;
-  border-color: red;
-}
+
 /*** fab ***/
 .fab{
   position: fixed;
@@ -1208,7 +1200,40 @@ footer{
   #div-title-find{
     margin-bottom: 10px;
   }
+  /******************************
+        Les Marques Page
+  ******************************/
+  /* #page-marques{
+
+  }
+  .top-marques-container{
+
+  }
+  .page-top-marques-container>.section-top-item{
+    position: static;
+    width: 48%;
+  }
+  .page-top-marques-container>.section-top-item>h3{
+    padding: 10px;
+  }
+  .page-top-marques-container>.section-top-item>p{
+    padding: 0px;
+    margin: 0px;
+  }
+  .page-top-marques-container>.section-top-item>button{
+    /* width: */
+  } */
+
+
+
+
+
+
+
+
+
 }
+
 @media(max-width: 900px){
   /* #navbar-list{
 
