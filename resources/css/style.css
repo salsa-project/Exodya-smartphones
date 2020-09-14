@@ -503,7 +503,7 @@ button{
   display: flex;
   align-items: center;
 }
-.les-derniers-item-image{
+.coming-item-image{
   height: 79px;
   padding: 3px;
   margin: 5px 20px 3px 15px;
@@ -593,12 +593,12 @@ button{
   width: 90%;
   margin: 0px auto;
 }
-#page-marques>#sections-top-marques>.top-marques-container{
+.page-top-marques-container{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-#page-marques>#sections-top-marques>.top-marques-container>.section-top-item{
+.page-top-marques-container>.section-top-item{
   width: 20%;
   margin: 20px;
 }
@@ -609,12 +609,12 @@ button{
   width: 90%;
   margin: 0px auto;
 }
-#pages-derniers>#sections-les-derniers>.section-derniers-items-container{
+.page-section-derniers-items-container{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-#pages-derniers>#sections-les-derniers>.section-derniers-items-container>.section-derniers-item{
+.page-section-derniers-items-container>.section-derniers-item{
   width: 20%;
   margin: 20px;
 }
@@ -1200,29 +1200,68 @@ footer{
   #div-title-find{
     margin-bottom: 10px;
   }
+
   /******************************
         Les Marques Page
   ******************************/
-  /* #page-marques{
-
+  #page-marques>#sections-top-marques{
+    width: 100%;
+    padding: 0px 5px;
   }
-  .top-marques-container{
-
+  #page-marques>#sections-top-marques>.sections-header>.section-title{
+    margin: 0px auto;
   }
   .page-top-marques-container>.section-top-item{
     position: static;
-    width: 48%;
+    width: 47%;
+    margin: 5px 0px;
+    border: none;
   }
   .page-top-marques-container>.section-top-item>h3{
-    padding: 10px;
+    font-size: 12pt;
+  }
+  .page-top-marques-container>.section-top-item>h3>img{
+    width: 40px;
   }
   .page-top-marques-container>.section-top-item>p{
-    padding: 0px;
-    margin: 0px;
+    margin: 8px 0px -8px;
+    font-size: 12pt;
+    text-align: center;
   }
   .page-top-marques-container>.section-top-item>button{
-    /* width: */
-  } */
+    width: 80%;
+    padding: 9px 0px;
+    font-size: 10pt;
+  }
+
+  /******************************
+        Les Derniers Page
+  ******************************/
+  #pages-derniers>#sections-les-derniers{
+    width: 100%;
+    padding: 0px 5px;
+  }
+  #pages-derniers>#sections-les-derniers>.sections-header>.section-title{
+    margin: 0px auto;
+  }
+  .page-section-derniers-items-container>.section-derniers-item{
+    position: relative;
+    width: 47%;
+    margin: 5px 0px;
+    border: none;
+  }
+  .page-section-derniers-items-container>.section-derniers-item>h3{
+    font-size: 12pt;
+  }
+  .page-section-derniers-items-container>.section-derniers-item>.dernier-item-img{
+    /* height: 70%; */
+    /* max-height: 300px; */
+    height: auto;
+    max-width: 50%;
+  }
+  .page-section-derniers-items-container>.section-derniers-item>.section-derniers-item-btn-container{
+    box-shadow: none;
+  }
 
 
 
@@ -1273,9 +1312,9 @@ footer{
   .section-top-item{
     min-width: 220px;
   } */
-  .section-derniers-items-container{
+  /* .section-derniers-items-container{
     flex-wrap: wrap;
-  }
+  } */
 
 
 
