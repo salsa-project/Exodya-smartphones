@@ -605,18 +605,80 @@ button{
 /***********************************
         les derniers page
 ***********************************/
-#pages-derniers>#sections-les-derniers{
-  width: 90%;
-  margin: 0px auto;
-}
 .page-section-derniers-items-container{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.page-section-derniers-items-container>.section-derniers-item{
-  width: 20%;
-  margin: 20px;
+.page-derniers-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+  width: 30%;
+  padding: 40px 10px 20px;
+}
+.page-dernier-item-title{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  background: rgba(240,240,240,1);
+  text-align: center;
+}
+.page-derniers-item-img-wrapper{
+
+}
+.page-derniers-item-img-wrapper>img{
+  /* max-height: 100%; */
+  /* max-width: 100%; */
+  max-width: 120px;
+  
+}
+.page-derniers-item-spec-container{
+  position: relative;
+  flex: 1;
+}
+.dernier-item-spec{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+  padding: 5px 10px;
+}
+.dernier-item-spec:hover *{
+  color: red;
+}
+.spec-value{
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+.spec{
+  position: relative;
+  left: 30px;
+  margin: 5px 0px;
+  color: gray;
+  font-size: 9pt;
+  font-weight: 100;
+}
+.dernier-item-spec>svg{
+  /* position: absolute; */
+  width: 20px;
+  fill: gray;
+}
+#Layer_1, #Layer_1 *{
+  stroke-width: 0.5px !important;
+}
+.page-dernier-item-visit-btn{
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 50%;
+  color: #232323;
+  background-color: white;
+  transform: translateX(-50%);  
 }
 
 /***********************************
@@ -1237,32 +1299,9 @@ footer{
   /******************************
         Les Derniers Page
   ******************************/
-  #pages-derniers>#sections-les-derniers{
-    width: 100%;
-    padding: 0px 5px;
+  #sections-les-derniers .page-derniers-item{
+    
   }
-  #pages-derniers>#sections-les-derniers>.sections-header>.section-title{
-    margin: 0px auto;
-  }
-  .page-section-derniers-items-container>.section-derniers-item{
-    position: relative;
-    width: 47%;
-    margin: 5px 0px;
-    border: none;
-  }
-  .page-section-derniers-items-container>.section-derniers-item>h3{
-    font-size: 12pt;
-  }
-  .page-section-derniers-items-container>.section-derniers-item>.dernier-item-img{
-    /* height: 70%; */
-    /* max-height: 300px; */
-    height: auto;
-    max-width: 50%;
-  }
-  .page-section-derniers-items-container>.section-derniers-item>.section-derniers-item-btn-container{
-    box-shadow: none;
-  }
-
 
 
 
