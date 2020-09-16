@@ -609,14 +609,17 @@ button{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 90%;
+  margin: 0px auto;
 }
 .page-derniers-item{
   display: flex;
   flex-direction: row;
   align-items: center;
   height: auto;
-  width: 30%;
-  padding: 40px 10px 20px;
+  width: 25%;
+  padding: 40px 10px 25px;
+  margin: 30px 10px;
 }
 .page-dernier-item-title{
   position: absolute;
@@ -624,17 +627,15 @@ button{
   left: 0px;
   width: 100%;
   padding: 10px 0px;
-  background: rgba(240,240,240,1);
+  background: rgba(240,240,240,0.5);
   text-align: center;
 }
 .page-derniers-item-img-wrapper{
 
 }
 .page-derniers-item-img-wrapper>img{
-  /* max-height: 100%; */
-  /* max-width: 100%; */
+  max-height: 100%;
   max-width: 120px;
-  
 }
 .page-derniers-item-spec-container{
   position: relative;
@@ -644,32 +645,34 @@ button{
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 5px 0px;
-  padding: 5px 10px;
+  padding: 5px 0px 10px;
+  margin: 5px 0px 5px 20px;
 }
-.dernier-item-spec:hover *{
+.dernier-item-spec{
+  border-bottom: 1px solid rgba(150,150,150,0.3);
+}
+.dernier-item-spec-last{
+  border: 0px;
+}
+.dernier-item-spec:hover>*{
   color: red;
 }
 .spec-value{
   position: absolute;
   top: 30px;
-  left: 40px;
+  left: 30px;
 }
 .spec{
   position: relative;
   left: 30px;
   margin: 5px 0px;
-  color: gray;
+  color: rgba(150,150,150,0.8);
   font-size: 9pt;
   font-weight: 100;
 }
 .dernier-item-spec>svg{
-  /* position: absolute; */
   width: 20px;
-  fill: gray;
-}
-#Layer_1, #Layer_1 *{
-  stroke-width: 0.5px !important;
+  fill: rgba(150,150,150,0.8);
 }
 .page-dernier-item-visit-btn{
   position: absolute;
@@ -1012,6 +1015,7 @@ footer{
   
   .nav-layer{
     position: fixed;
+    top: 0px;
     height: 100%;
     width: 100vw;
     z-index: 40;
@@ -1299,10 +1303,22 @@ footer{
   /******************************
         Les Derniers Page
   ******************************/
-  #sections-les-derniers .page-derniers-item{
-    
+  .page-derniers-item{
+    position: relative;
+    /* flex-direction: column; ------[test1]----- */
+    height: auto;
+    width: 90%;
+    margin: 10px 0px 40px;
   }
-
+  /* .page-derniers-item-img-wrapper>img{
+    max-width: 100px;
+  }
+  .page-derniers-item-spec-container{
+    display: flex;
+  } -------[test1]------ */
+  .page-derniers-item-img-wrapper{
+    margin: 10px 0px 0px;
+  }
 
 
 
